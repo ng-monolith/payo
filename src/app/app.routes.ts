@@ -12,6 +12,7 @@ import { SellComponent } from './views/sell/sell/sell.component';
 import { DetailsComponent } from '../shared/payo-table/details/details.component';
 import { AnnouncementsComponent } from './views/announcements/announcements.component';
 import { ForgotComponent } from './views/auth/forgot/forgot.component';
+import { DetailsResolverService } from '../shared/Resolvers/details-resolver.resolver';
 
 
 export const routes: Routes = [
@@ -26,6 +27,6 @@ export const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'announcements', component: AnnouncementsComponent },
   { path: 'forgot', component: ForgotComponent },
-  { path: 'details/:id', component: DetailsComponent },
+  { path: 'details/:id', component: DetailsComponent, resolve: { details: DetailsResolverService } },
   { path: '**', component: PageNotFoundComponent }
 ];

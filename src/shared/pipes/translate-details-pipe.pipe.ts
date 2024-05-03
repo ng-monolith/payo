@@ -15,6 +15,7 @@ interface HumanReadableValues {
 export class TranslateDetailsPipe implements PipeTransform {
   transform(value: unknown, key: string): string {
     const translations: Translations = {
+      'primary': 'Pierwotny',
       'marketType': 'Typ rynku',
       'adSignature': 'Sygnatura',
       'exclusiveOffer': 'Oferta wyłączna',
