@@ -1,3 +1,31 @@
 import { Routes } from '@angular/router';
+import { HomeComponent } from './views/home/home/home.component';
+import { BuyComponent } from './views/buy/buy/buy.component';
+import { RentComponent } from './views/rent/rent/rent.component';
+import { MyAccountComponent } from './views/my-account/my-account.component';
+import { AddListingComponent } from './views/add-listing/add-listing.component';
+import { SettingsComponent } from './views/settings/settings.component';
+import { LoginComponent } from './views/auth/login/login.component';
+import { RegisterComponent } from './views/auth/register/register.component';
+import { PageNotFoundComponent } from './views/auth/page-not-found/page-not-found.component';
+import { SellComponent } from './views/sell/sell/sell.component';
+import { DetailsComponent } from '../shared/payo-table/details/details.component';
+import { AnnouncementsComponent } from './views/announcements/announcements.component';
+import { ForgotComponent } from './views/auth/forgot/forgot.component';
 
-export const routes: Routes = [];
+
+export const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'buy', component: BuyComponent },
+  { path: 'rent', component: RentComponent },
+  { path: 'sell', component: SellComponent },
+  { path: 'my-account', component: MyAccountComponent },
+  { path: 'add-listing', component: AddListingComponent },
+  { path: 'settings', component: SettingsComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'announcements', component: AnnouncementsComponent },
+  { path: 'forgot', component: ForgotComponent },
+  { path: 'details/:id', component: DetailsComponent },
+  { path: '**', component: PageNotFoundComponent }
+];

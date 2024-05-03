@@ -1,0 +1,26 @@
+@import "mixins";
+@import "variables";
+@import "typography";
+
+.banner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("../../../assets/images/banner-home.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  h2 {
+    @include title-v1;
+    color: $color-white;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  p {
+    @include body-v1;
+    color: $color-white;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,73 @@
+@import 'variables';
+@import "mixins";
+
+@mixin title-v1 {
+  @include font-params(48px, 600, 1.5);
+  font-family: $poppins-font-family;
+  color: $defaultTextColor;
+  @include not-desktop {
+    font-size: 20px;
+  }
+}
+
+@mixin title-v2 {
+  @include font-params(36px, 500, 1.25);
+  font-family: $poppins-font-family;
+  color: $defaultTextColor;
+  @include not-desktop {
+    font-size: 14px;
+  }
+}
+
+@mixin title-v3 {
+  @include font-params(24px, 500, 1.25);
+  font-family: $poppins-font-family;
+  color: $defaultTextColor;
+}
+
+@mixin title-v4 {
+  @include font-params(16px, 500, 20px);
+  font-family: $poppins-font-family;
+  color: $defaultTextColor;
+}
+
+@mixin title-v5 {
+  @include font-params(12px, 500, 16px);
+  font-family: $poppins-font-family;
+  color: $defaultTextColor;
+}
+
+@mixin body-v1 {
+  @include font-params(24px, 400, 20px);
+  font-family: $poppins-font-family;
+  color: $defaultTextColor;
+}
+
+@mixin body-v2 {
+  @include font-params(14px, 300, 20px);
+  font-family: $poppins-font-family;
+  color: $defaultTextColor;
+}
+
+@mixin body-v3 {
+  @include font-params(12px, 400, 18px);
+  font-family: $poppins-font-family;
+  color: $defaultTextColor;
+}
+
+@mixin button-v1 {
+  @include font-params(14px, 500, 20px);
+  font-family: $poppins-font-family;
+}
+
+@mixin sidebar-title-v1 {
+  @include font-params(13px, 400, 18px);
+  font-family: $poppins-font-family;
+  color: $defaultTextColor;
+}
+
+@mixin linked-text {
+  @include font-params(12px, 400, 20px);
+  font-family: $poppins-font-family;
+  color: $linkTextColor;
+}

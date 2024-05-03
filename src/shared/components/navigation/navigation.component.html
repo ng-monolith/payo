@@ -1,0 +1,25 @@
+<mat-toolbar class="navigation">
+  <img routerLink="" src="/assets/images/logo.svg" alt="Logo" style="height: 20px;">
+
+  <span style="flex: 1 1 auto;"></span>
+
+  <button mat-button routerLink="/buy">Kupuję</button>
+  <button mat-button routerLink="/rent">Wynajmuję</button>
+  <button mat-button routerLink="/sell">Sprzedaję</button>
+
+  <button mat-button [matMenuTriggerFor]="accountMenu">
+    <mat-icon>person</mat-icon>
+    Moje konto
+  </button>
+
+  <mat-menu class="dropdown-menu" #accountMenu="matMenu">
+    <span class="active-user">
+      <span> <mat-icon>person</mat-icon> {{ 'test@user.pl' }}</span>
+    </span>
+    <button mat-menu-item routerLink="/announcements">Ogłoszenia</button>
+    <button mat-menu-item routerLink="/settings">Ustawienia</button>
+    <button mat-menu-item routerLink="/logout">Wyloguj</button>
+  </mat-menu>
+
+  <button mat-flat-button color="accent" routerLink="/add-listing">Dodaj ogłoszenie</button>
+</mat-toolbar>

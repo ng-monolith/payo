@@ -1,0 +1,137 @@
+@import "variables";
+
+@mixin cover-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+// Flex column
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Center items flex
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Center items in column
+@mixin flex-center-column {
+  @include flex-center;
+  flex-direction: column;
+}
+
+// Vertical centering in flex
+@mixin flex-center-vertical {
+  display: flex;
+  align-items: center;
+}
+
+// Horizontal centering in flex
+@mixin flex-center-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin desktop-only {
+  @media only screen and (min-width: $tablet-breakpoint + 1px) {
+    @content;
+  }
+}
+
+// Tablet only styles
+@mixin tablet-only {
+  @media only screen and (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+// Mobile only styles
+@mixin mobile-only {
+  @media only screen and (max-width: $mobile-breakpoint - 1px) {
+    @content;
+  }
+}
+
+// Not mobile styles > 768px
+@mixin not-mobile {
+  @media only screen and (min-width: $mobile-breakpoint) {
+    @content;
+  }
+}
+
+// Not desktop styles < 992px
+@mixin not-desktop {
+  @media only screen and (max-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+// Custom max width
+@mixin media-custom-max($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+// Custom min width
+@mixin media-custom-min($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin font-params($font-size, $font-weight: null, $line-height: null, $letter-spacing: null) {
+  @if unit($font-size) == '' {
+    font-size: $font-size * 1px;
+  } @else {
+    font-size: $font-size;
+  }
+
+  @if $font-weight {
+    font-weight: $font-weight;
+  }
+
+  @if $line-height {
+    line-height: $line-height;
+  }
+
+  @if $letter-spacing {
+    letter-spacing: $letter-spacing;
+  }
+}
+
+@mixin clamp($number) {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: $number;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin position($position: false, $top: false, $right: false, $bottom: false, $left: false) {
+  @if $position {
+    position: $position;
+  }
+  @if $top {
+    top: $top;
+  }
+  @if $right {
+    right: $right;
+  }
+  @if $bottom {
+    bottom: $bottom;
+  }
+  @if $left {
+    left: $left;
+  }
+}

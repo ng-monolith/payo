@@ -1,0 +1,18 @@
+<div class="listing-container">
+  <article *ngFor="let listing of listings" class="listing-item">
+    <a class="card-container" [routerLink]="['/details', listing.id]">
+      <img [src]="listing.propertyDetails.images ? listing.propertyDetails.images[0] : './assets/images/image-placeholder.jpg'" alt="{{ listing.propertyDetails.title }}">
+      <div class="listing-details">
+        <p class="listing-details__price">{{ listing.listingDetails.price }} {{ listing.listingDetails.currency }}</p>
+        <h3 class="listing-details__title">{{ listing.propertyDetails.locality }}, {{ listing.listingDetails.area }} m²</h3>
+
+        <div class="listing-details__features">
+          <div *ngFor="let feature of getDetailsArray(listing.listingDetails)" class="listing-details__more">
+            <span>{{ feature.value | translateDetails:feature.key }}</span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </article>
+</div>
+

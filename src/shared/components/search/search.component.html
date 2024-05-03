@@ -1,0 +1,64 @@
+<form class="search-form" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+  <div class="wrapper">
+    <div class="search-row top-row">
+      <mat-form-field>
+        <mat-label>Typ nieruchomości</mat-label>
+        <mat-select formControlName="estate">
+          <mat-option value="FLAT">Mieszkania</mat-option>
+          <mat-option value="HOUSE">Domy</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Typ transakcji</mat-label>
+        <mat-select formControlName="transaction">
+          <mat-option value="SELL">Na sprzedaż</mat-option>
+          <mat-option value="RENT">Na wynajem</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Lokalizacja</mat-label>
+        <input matInput formControlName="location">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Promień odległości</mat-label>
+        <mat-select formControlName="distanceRadius">
+          <mat-option value="10">10 km</mat-option>
+          <mat-option value="15">15 km</mat-option>
+          <mat-option value="20">20 km</mat-option>
+          <mat-option value="25">25 km</mat-option>
+          <mat-option value="50">50 km</mat-option>
+          <mat-option value="75">75 km</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+
+    <div class="search-row bottom-row">
+      <mat-form-field>
+        <mat-label>Cena od</mat-label>
+        <input matInput type="number" formControlName="priceMin">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Cena do</mat-label>
+        <input matInput type="number" formControlName="priceMax">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Powierzchnia od (m²)</mat-label>
+        <input matInput type="number" formControlName="areaMin">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Powierzchnia do (m²)</mat-label>
+        <input matInput type="number" formControlName="areaMax">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <button mat-raised-button color="primary" type="submit">Wyszukaj</button>
+
+</form>

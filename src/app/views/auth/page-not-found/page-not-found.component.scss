@@ -1,0 +1,16 @@
+@import "mixins";
+@import "typography";
+@import "variables";
+
+.not-found-container {
+  @include flex-center;
+
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+  height: calc(100vh - 64px - 350px);
+
+  img {
+    margin: 0 auto;
+  }
+}

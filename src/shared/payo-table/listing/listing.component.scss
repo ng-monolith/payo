@@ -1,0 +1,53 @@
+@import "variables";
+@import "mixins";
+@import "typography";
+
+:host {
+  display: flex;
+  justify-content: center;
+  background-color: $bg-default;
+}
+
+.listing-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+  max-width: 1200px;
+
+  .listing-item {
+    margin-bottom: 20px;
+    border: 1px solid $border-color;
+    padding: 10px;
+    background-color: $color-white;
+
+    img {
+      @include box(400px, 250px);
+      object-fit: cover;
+    }
+
+    .listing-details {
+      padding: 10px;
+
+      &__title {
+        margin-top: 0;
+        @include body-v2;
+
+      }
+      &__price {
+        @include title-v3;
+        @include title-v3;
+      }
+      &__features {
+        column-count: 2;
+        @include body-v3;
+      }
+    }
+  }
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

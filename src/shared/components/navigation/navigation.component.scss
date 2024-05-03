@@ -1,0 +1,27 @@
+@import "variables";
+
+:host {
+  ::ng-deep {
+    .navigation {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid $border-color;
+    }
+
+    .mat-menu-panel.dropdown-menu {
+      min-width: 200px !important;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-top: 1px solid $border-color;
+    }
+
+    .mat-menu-content {
+      padding: 0;
+    }
+
+
+    .mat-menu-item.mat-mdc-focus-indicator {
+      padding: 10px 24px;
+    }
+  }
+}
