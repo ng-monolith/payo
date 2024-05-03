@@ -96,7 +96,7 @@
   <li class="breadcrumb-item">Components</li>
   <li class="breadcrumb-item"
   >
-  AppComponent</li>
+  ListingComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -113,6 +113,10 @@
                 role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
         </li>
         <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
             <a href="#tree" class="nav-link"
                 role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
         </li>
@@ -123,7 +127,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/app.component.ts</code>
+    <code>src/shared/payo-table/listing/listing.component.ts</code>
 </p>
 
 
@@ -155,7 +159,7 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-root</code></td>
+                <td class="col-md-9"><code>app-listing</code></td>
             </tr>
 
             <tr>
@@ -166,30 +170,29 @@
             <tr>
                 <td class="col-md-3">imports</td>
                 <td class="col-md-9">
-                            <code>RouterOutlet</code>
-                                <code><a href="../components/NavigationComponent.html" target="_self" >NavigationComponent</a></code>
-                                <code><a href="../components/HeaderComponent.html" target="_self" >HeaderComponent</a></code>
-                                <code><a href="../components/BannerComponent.html" target="_self" >BannerComponent</a></code>
-                                <code><a href="../components/SearchComponent.html" target="_self" >SearchComponent</a></code>
-                                <code><a href="../components/FooterComponent.html" target="_self" >FooterComponent</a></code>
-                            <code>CommonModule</code>
+                            <code>CurrencyPipe</code>
+                            <code>RouterLink</code>
+                            <code>NgForOf</code>
+                            <code>UpperCasePipe</code>
+                            <code>TitleCasePipe</code>
+                            <code>TranslateDetailsPipe</code>
                 </td>
             </tr>
 
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./listing.component.scss</code></td>
+            </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./app.component.html</code></td>
+                <td class="col-md-9"><code>./listing.component.html</code></td>
             </tr>
 
 
 
-            <tr>
-                <td class="col-md-3">styleUrl</td>
-                <td class="col-md-9"><code>./app.component.scss</code></td>
-            </tr>
 
 
 
@@ -213,18 +216,10 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#authRoutes" >authRoutes</a>
+                                <a href="#announcementService" >announcementService</a>
                             </li>
                             <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#route" >route</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#routeManager" >routeManager</a>
-                            </li>
-                            <li>
-                                <a href="#title" >title</a>
+                                <a href="#listings" >listings</a>
                             </li>
                         </ul>
                     </td>
@@ -239,7 +234,25 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#getDetailsArray" >getDetailsArray</a>
+                            </li>
+                            <li>
                                 <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#config" >config</a>
                             </li>
                         </ul>
                     </td>
@@ -248,45 +261,35 @@
 
 
 
-
-                    <tr>
-                        <td class="col-md-4">
-                            <h6><b>Accessors</b></h6>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <ul class="index-list">
-                                <li>
-                                    <a href="#isAuthRoute" >isAuthRoute</a>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
         </tbody>
     </table>
 </section>
 
-    <section data-compodoc="block-constructor">
-    <h3 id="constructor">Constructor</h3>
+
+    <section data-compodoc="block-inputs">
+    <h3 id="inputs">Inputs</h3>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+                        <a name="config"></a>
+                        <b>config</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/ListingConfig.html" target="_self" >ListingConfig</a></code>
+
                     </td>
                 </tr>
                         <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/app.component.ts:25</a></div>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/shared/payo-table/listing/listing.component.ts:23</a></div>
                             </td>
                         </tr>
-
             </tbody>
         </table>
 </section>
-
-
 
 
 
@@ -295,6 +298,73 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDetailsArray"></a>
+                    <span class="name">
+                        <span ><b>getDetailsArray</b></span>
+                        <a href="#getDetailsArray"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getDetailsArray(details: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="36"
+                                    class="link-to-prism">src/shared/payo-table/listing/listing.component.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>details</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Array&lt;literal type&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -315,8 +385,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="31"
-                                    class="link-to-prism">src/app/app.component.ts:31</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="28"
+                                    class="link-to-prism">src/shared/payo-table/listing/listing.component.ts:28</a></div>
                         </td>
                     </tr>
 
@@ -342,23 +412,22 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="authRoutes"></a>
+                    <a name="announcementService"></a>
                     <span class="name">
                             <span class="modifier">Private</span>
-                        <span ><b>authRoutes</b></span>
-                        <a href="#authRoutes"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>announcementService</b></span>
+                        <a href="#announcementService"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>    <code>string[]</code>
-
+                        <i>Default value : </i><code>inject(AnnouncementServiceService)</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/app.component.ts:22</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/shared/payo-table/listing/listing.component.ts:26</a></div>
                         </td>
                     </tr>
 
@@ -369,79 +438,27 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="route"></a>
+                    <a name="listings"></a>
                     <span class="name">
-                            <span class="modifier">Private</span>
-                        <span ><b>route</b></span>
-                        <a href="#route"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>listings</b></span>
+                        <a href="#listings"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>inject(ActivatedRoute)</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/app.component.ts:24</a></div>
-                        </td>
-                    </tr>
-
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="routeManager"></a>
-                    <span class="name">
-                            <span class="modifier">Private</span>
-                        <span ><b>routeManager</b></span>
-                        <a href="#routeManager"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>inject(RouteManagerService)</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/app.component.ts:25</a></div>
-                        </td>
-                    </tr>
-
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="title"></a>
-                    <span class="name">
-                        <span ><b>title</b></span>
-                        <a href="#title"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                        <i>Type : </i>        <code><a href="../interfaces/Listing.html" target="_self" >Listing[]</a></code>
 
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>&#x27;payo&#x27;</code>
+                        <i>Default value : </i><code>[]</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/app.component.ts:20</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/shared/payo-table/listing/listing.component.ts:24</a></div>
                         </td>
                     </tr>
 
@@ -450,88 +467,133 @@
     </table>
 </section>
 
-    <section data-compodoc="block-accessors">
-    <h3 id="accessors">
-        Accessors
-    </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="isAuthRoute"></a>
-                        <span class="name"><b>isAuthRoute</b><a href="#isAuthRoute"><span class="icon ion-ios-link"></span></a></span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <span class="accessor"><b>get</b><code>isAuthRoute()</code></span>
-                    </td>
-                </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/app.component.ts:35</a></div>
-                                </td>
-                            </tr>
-
-            </tbody>
-        </table>
-</section>
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, inject, OnInit } from &#x27;@angular/core&#x27;;
-import { ActivatedRoute, RouterOutlet } from &#x27;@angular/router&#x27;;
-import { NavigationComponent } from &#x27;../shared/components/navigation/navigation.component&#x27;;
-import { HeaderComponent } from &#x27;../shared/components/header/header.component&#x27;;
-import { BannerComponent } from &#x27;../shared/components/banner/banner.component&#x27;;
-import { SearchComponent } from &#x27;../shared/components/search/search.component&#x27;;
-import { FooterComponent } from &#x27;../shared/components/footer/footer.component&#x27;;
-import { RouteManagerService } from &#x27;../shared/services/route-manager.service&#x27;;
-import { CommonModule } from &#x27;@angular/common&#x27;;
-import { initFlowbite } from &#x27;flowbite&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, inject, Input, OnInit } from &#x27;@angular/core&#x27;;
+import { Listing, ListingConfig } from &#x27;../../models/listing&#x27;;
+import { AnnouncementServiceService } from &#x27;../../services/announcement-service.service&#x27;;
+import { CurrencyPipe, NgForOf, TitleCasePipe, UpperCasePipe } from &#x27;@angular/common&#x27;;
+import { RouterLink } from &#x27;@angular/router&#x27;;
+import { TranslateDetailsPipe } from &#x27;../../pipes/translate-details-pipe.pipe&#x27;;
 
 @Component({
-  selector: &#x27;app-root&#x27;,
+  selector: &#x27;app-listing&#x27;,
   standalone: true,
-  imports: [RouterOutlet, NavigationComponent, HeaderComponent, BannerComponent, SearchComponent, FooterComponent, CommonModule],
-  templateUrl: &#x27;./app.component.html&#x27;,
-  styleUrl: &#x27;./app.component.scss&#x27;,
+  imports: [
+    CurrencyPipe,
+    RouterLink,
+    NgForOf,
+    UpperCasePipe,
+    TitleCasePipe,
+    TranslateDetailsPipe,
+  ],
+  templateUrl: &#x27;./listing.component.html&#x27;,
+  styleUrls: [&#x27;./listing.component.scss&#x27;]
 })
-export class AppComponent implements OnInit{
-  title &#x3D; &#x27;payo&#x27;;
+export class ListingComponent implements OnInit {
+  @Input() config!: ListingConfig;
+  listings: Listing[] &#x3D; [];
 
-  private authRoutes: string[];
-
-  private route &#x3D; inject(ActivatedRoute);
-  private routeManager &#x3D; inject(RouteManagerService);
-
-  constructor() {
-    this.authRoutes &#x3D; this.routeManager.getAuthRoutes();
-  }
+  private announcementService &#x3D; inject(AnnouncementServiceService);
 
   ngOnInit(): void {
-    initFlowbite();
+    this.announcementService.getAllListings(this.config).subscribe({
+      next: (listings: Listing[]) &#x3D;&gt; {
+        this.listings &#x3D; listings;
+      },
+      error: (error) &#x3D;&gt; console.error(&#x27;Failed to load listings:&#x27;, error)
+    });
   }
-
-  get isAuthRoute(): boolean {
-    const path &#x3D; this.route.snapshot.firstChild?.routeConfig?.path || &#x27;&#x27;;
-    return !this.authRoutes.includes(path);
+  getDetailsArray(details: any): Array&lt;{ key: string, value: any }&gt; {
+    return Object.entries(details).map(([key, value]) &#x3D;&gt; ({ key, value }));
   }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;app-header *ngIf&#x3D;&quot;isAuthRoute&quot; &gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;listing-container&quot;&gt;
+  &lt;article *ngFor&#x3D;&quot;let listing of listings&quot; class&#x3D;&quot;listing-item&quot;&gt;
+    &lt;a class&#x3D;&quot;card-container&quot; [routerLink]&#x3D;&quot;[&#x27;/details&#x27;, listing.id]&quot;&gt;
+      &lt;img [src]&#x3D;&quot;listing.propertyDetails.images ? listing.propertyDetails.images[0] : &#x27;./assets/images/image-placeholder.jpg&#x27;&quot; alt&#x3D;&quot;{{ listing.propertyDetails.title }}&quot;&gt;
+      &lt;div class&#x3D;&quot;listing-details&quot;&gt;
+        &lt;p class&#x3D;&quot;listing-details__price&quot;&gt;{{ listing.listingDetails.price }} {{ listing.listingDetails.currency }}&lt;/p&gt;
+        &lt;h3 class&#x3D;&quot;listing-details__title&quot;&gt;{{ listing.propertyDetails.locality }}, {{ listing.listingDetails.area }} m²&lt;/h3&gt;
 
-&lt;/app-header&gt;
-&lt;router-outlet&gt;&lt;/router-outlet&gt;
-&lt;app-footer *ngIf&#x3D;&quot;isAuthRoute&quot;/&gt;
+        &lt;div class&#x3D;&quot;listing-details__features&quot;&gt;
+          &lt;div *ngFor&#x3D;&quot;let feature of getDetailsArray(listing.listingDetails)&quot; class&#x3D;&quot;listing-details__more&quot;&gt;
+            &lt;span&gt;{{ feature.value | translateDetails:feature.key }}&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/a&gt;
+  &lt;/article&gt;
+&lt;/div&gt;
+
 </code></pre>
     </div>
 
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./listing.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;variables&quot;;
+@import &quot;mixins&quot;;
+@import &quot;typography&quot;;
+
+:host {
+  display: flex;
+  justify-content: center;
+  background-color: $bg-default;
+}
+
+.listing-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+  max-width: 1200px;
+
+  .listing-item {
+    margin-bottom: 20px;
+    border: 1px solid $border-color;
+    padding: 10px;
+    background-color: $color-white;
+
+    img {
+      @include box(400px, 250px);
+      object-fit: cover;
+    }
+
+    .listing-details {
+      padding: 10px;
+
+      &amp;__title {
+        margin-top: 0;
+        @include body-v2;
+
+      }
+      &amp;__price {
+        @include title-v3;
+        @include title-v3;
+      }
+      &amp;__features {
+        column-count: 2;
+        @include body-v3;
+      }
+    }
+  }
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+</code></pre>
+    </div>
 
     <div class="tab-pane fade " id="tree">
         <div id="tree-container"></div>
@@ -558,10 +620,10 @@ export class AppComponent implements OnInit{
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-header *ngIf="isAuthRoute" ></app-header><router-outlet></router-outlet><app-footer *ngIf="isAuthRoute"/></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="listing-container">  <article *ngFor="let listing of listings" class="listing-item">    <a class="card-container" [routerLink]="[\'/details\', listing.id]">      <img [src]="listing.propertyDetails.images ? listing.propertyDetails.images[0] : \'./assets/images/image-placeholder.jpg\'" alt="{{ listing.propertyDetails.title }}">      <div class="listing-details">        <p class="listing-details__price">{{ listing.listingDetails.price }} {{ listing.listingDetails.currency }}</p>        <h3 class="listing-details__title">{{ listing.propertyDetails.locality }}, {{ listing.listingDetails.area }} m²</h3>        <div class="listing-details__features">          <div *ngFor="let feature of getDetailsArray(listing.listingDetails)" class="listing-details__more">            <span>{{ feature.value | translateDetails:feature.key }}</span>          </div>        </div>      </div>    </a>  </article></div></div>'
     var COMPONENTS = [{'name': 'AddListingComponent', 'selector': 'app-add-listing'},{'name': 'AnnouncementsComponent', 'selector': 'app-announcements'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BannerComponent', 'selector': 'app-banner'},{'name': 'BuyComponent', 'selector': 'app-buy'},{'name': 'DetailsComponent', 'selector': 'app-details'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotComponent', 'selector': 'app-forgot'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'ListingComponent', 'selector': 'app-listing'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MyAccountComponent', 'selector': 'app-my-account'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'RentComponent', 'selector': 'app-rent'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SellComponent', 'selector': 'app-sell'},{'name': 'SettingsComponent', 'selector': 'app-settings'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'AppComponent'};
+    var ACTUAL_COMPONENT = {'name': 'ListingComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -607,7 +669,7 @@ export class AppComponent implements OnInit{
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'ListingComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

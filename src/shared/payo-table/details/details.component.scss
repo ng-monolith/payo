@@ -1,3 +1,7 @@
+@import "variables";
+@import "mixins";
+@import "typography";
+
 .details-container {
   max-width: 800px;
   margin: auto;
@@ -40,6 +44,9 @@
         font-weight: bold;
       }
     }
+  }
+  .description {
+    @include body-v3;
   }
 
   footer {

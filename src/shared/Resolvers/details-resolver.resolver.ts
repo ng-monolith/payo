@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
@@ -8,7 +8,7 @@ import { AnnouncementServiceService } from '../services/announcement-service.ser
   providedIn: 'root'
 })
 export class DetailsResolverService implements Resolve<any> {
-  constructor(private announcementService: AnnouncementServiceService) {}
+  private announcementService = inject(AnnouncementServiceService);
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
     const id = route.paramMap.get('id');

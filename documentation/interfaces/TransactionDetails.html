@@ -86,7 +86,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content miscellaneous-variables">
+               <div class="content interface">
                    <div class="content-data">
 
 
@@ -101,126 +101,144 @@
 
 
 
-
-
-
-
-
 <ol class="breadcrumb">
-  <li class="breadcrumb-item">Miscellaneous</li>
-  <li class="breadcrumb-item">Variables</li>
+  <li class="breadcrumb-item">Interfaces</li>
+  <li class="breadcrumb-item"
+  >
+  TransactionDetails</li>
 </ol>
 
-<section data-compodoc="block-index">
-    <h3 id="index">Index</h3>
-    <table class="table table-sm table-bordered index-table">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <ul class="index-list">
-                        <li>
-                            <a href="#appConfig" title="src/app/app.config.ts" ><b>appConfig</b>&nbsp;&nbsp;&nbsp;(src/.../app.config.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#environment" title="src/environment/environment.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#" title="src/shared/configs/api-urls.config.ts" ><b></b>&nbsp;&nbsp;&nbsp;(src/.../api-urls.config.ts)</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</section>
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
 
-    <h3>src/app/app.config.ts</h3>
-    <section data-compodoc="block-properties">
-    <h3></h3>    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="appConfig"></a>
-                    <span class="name">
-                        <span ><b>appConfig</b></span>
-                        <a href="#appConfig"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>    <code>ApplicationConfig</code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>{
-  providers: [provideRouter(routes), provideAnimationsAsync(), provideHttpClient()]
-}</code>
-                    </td>
-                </tr>
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/shared/models/announcement.dto.ts</code>
+        </p>
 
 
-        </tbody>
-    </table>
-</section>
-    <h3>src/environment/environment.ts</h3>
-    <section data-compodoc="block-properties">
-    <h3></h3>    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="environment"></a>
-                    <span class="name">
-                        <span ><b>environment</b></span>
-                        <a href="#environment"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>{
-  apiUrl: &#x27;http://localhost:3000&#x27;,
-  production: false,
-  type: EnvironmentTypesEnum.local,
-}</code>
-                    </td>
-                </tr>
 
 
-        </tbody>
-    </table>
-</section>
-    <h3>src/shared/configs/api-urls.config.ts</h3>
-    <section data-compodoc="block-properties">
-    <h3></h3>    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name=""></a>
-                    <span class="name">
-                        <span ><b></b></span>
-                        <a href="#"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>environment</code>
-                    </td>
-                </tr>
+        <section data-compodoc="block-index">
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Properties</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                        <a href="#transactionType" 
+>
+                                            transactionType
+                                        </a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
 
-        </tbody>
-    </table>
-</section>
+
+            <section data-compodoc="block-properties">
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="transactionType"></a>
+                                        <span class="name "><b>transactionType</b>
+                                            <a href="#transactionType">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>transactionType:     <code>&quot;sell&quot; | &quot;rent&quot;</code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code>&quot;sell&quot; | &quot;rent&quot;</code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export interface TransactionDetails {
+  transactionType: &#x27;sell&#x27; | &#x27;rent&#x27;;
+}
+
+export interface PropertyDetails {
+  propertyType: &#x27;flat&#x27; | &#x27;house&#x27;;
+  title: string;
+  description: string;
+  locality: string;
+}
+
+export interface ListingDetails {
+  marketType: &#x27;primary&#x27; | &#x27;secondary&#x27;;
+  adSignature?: string;
+  exclusiveOffer: boolean;
+  noAgentProvision: boolean;
+  area: number;
+  price: number;
+  currency: &#x27;PLN&#x27; | &#x27;EUR&#x27; | &#x27;USD&#x27;;
+  rooms?: number;
+  floor?: number;
+  totalFloors?: number;
+  elevator: boolean;
+  buildingType:  &#x27;none&#x27; | &#x27;block&#x27; | &#x27;multifamilyHouse&#x27; | &#x27;detachedHouse&#x27; | &#x27;tenement&#x27; | &#x27;apartmentBuilding&#x27; | &#x27;loft&#x27; | &#x27;residence&#x27;;
+  yearBuilt?: number;
+  conditionType:  &#x27;none&#x27; | &#x27;highStandard&#x27; | &#x27;veryGood&#x27; | &#x27;good&#x27; | &#x27;toRefresh&#x27; | &#x27;toRenovate&#x27; | &#x27;developerFinished&#x27; | &#x27;newlyFinished&#x27;;
+  parkingType: &#x27;none&#x27; | &#x27;onStreet&#x27; | &#x27;onFencedGrounds&#x27; | &#x27;inUndergroundGarage&#x27; | &#x27;inBuildingGarage&#x27; | &#x27;detachedGarage&#x27; | &#x27;garageShelter&#x27;;
+  energeticCert: boolean;
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
 
 
 
@@ -249,8 +267,8 @@
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-variables';
-            var COMPODOC_CURRENT_PAGE_URL = 'variables.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'TransactionDetails.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

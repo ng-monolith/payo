@@ -86,7 +86,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content miscellaneous-variables">
+               <div class="content guard">
                    <div class="content-data">
 
 
@@ -98,129 +98,212 @@
 
 
 
-
-
-
-
-
-
-
-
 <ol class="breadcrumb">
-  <li class="breadcrumb-item">Miscellaneous</li>
-  <li class="breadcrumb-item">Variables</li>
+    <li class="breadcrumb-item">Guards</li>
+    <li class="breadcrumb-item" >DetailsResolverService</li>
 </ol>
 
-<section data-compodoc="block-index">
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+        <div class="tab-pane fade active in" id="info">
+            <p class="comment">
+            <h3>File</h3>
+            </p>
+            <p class="comment">
+                <code>src/shared/Resolvers/details-resolver.resolver.ts</code>
+            </p>
+
+
+
+
+
+
+                <section data-compodoc="block-index">
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <ul class="index-list">
-                        <li>
-                            <a href="#appConfig" title="src/app/app.config.ts" ><b>appConfig</b>&nbsp;&nbsp;&nbsp;(src/.../app.config.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#environment" title="src/environment/environment.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#" title="src/shared/configs/api-urls.config.ts" ><b></b>&nbsp;&nbsp;&nbsp;(src/.../api-urls.config.ts)</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#announcementService" >announcementService</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#resolve" >resolve</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
         </tbody>
     </table>
 </section>
 
-    <h3>src/app/app.config.ts</h3>
-    <section data-compodoc="block-properties">
-    <h3></h3>    <table class="table table-sm table-bordered">
+
+                <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="appConfig"></a>
+                    <a name="resolve"></a>
                     <span class="name">
-                        <span ><b>appConfig</b></span>
-                        <a href="#appConfig"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>resolve</b></span>
+                        <a href="#resolve"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>    <code>ApplicationConfig</code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>{
-  providers: [provideRouter(routes), provideAnimationsAsync(), provideHttpClient()]
-}</code>
-                    </td>
-                </tr>
-
-
-        </tbody>
-    </table>
-</section>
-    <h3>src/environment/environment.ts</h3>
-    <section data-compodoc="block-properties">
-    <h3></h3>    <table class="table table-sm table-bordered">
-        <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="environment"></a>
-                    <span class="name">
-                        <span ><b>environment</b></span>
-                        <a href="#environment"><span class="icon ion-ios-link"></span></a>
-                    </span>
+<code>resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot)</code>
                 </td>
             </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>{
-  apiUrl: &#x27;http://localhost:3000&#x27;,
-  production: false,
-  type: EnvironmentTypesEnum.local,
-}</code>
-                    </td>
-                </tr>
 
 
-        </tbody>
-    </table>
-</section>
-    <h3>src/shared/configs/api-urls.config.ts</h3>
-    <section data-compodoc="block-properties">
-    <h3></h3>    <table class="table table-sm table-bordered">
-        <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="13"
+                                    class="link-to-prism">src/shared/Resolvers/details-resolver.resolver.ts:13</a></div>
+                        </td>
+                    </tr>
+
+
             <tr>
                 <td class="col-md-4">
-                    <a name=""></a>
-                    <span class="name">
-                        <span ><b></b></span>
-                        <a href="#"><span class="icon ion-ios-link"></span></a>
-                    </span>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>route</td>
+                                            <td>
+                                                        <code>ActivatedRouteSnapshot</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>state</td>
+                                            <td>
+                                                        <code>RouterStateSnapshot</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
                 </td>
             </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>environment</code>
-                    </td>
-                </tr>
-
-
         </tbody>
     </table>
 </section>
+        </div>
+
+
+        <div class="tab-pane fade  tab-source-code" id="source">
+            <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { inject, Injectable } from &#x27;@angular/core&#x27;;
+import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from &#x27;@angular/router&#x27;;
+import { Observable, of } from &#x27;rxjs&#x27;;
+import { catchError } from &#x27;rxjs/operators&#x27;;
+import { AnnouncementServiceService } from &#x27;../services/announcement-service.service&#x27;;
+
+@Injectable({
+  providedIn: &#x27;root&#x27;
+})
+export class DetailsResolverService implements Resolve&lt;any&gt; {
+  private announcementService &#x3D; inject(AnnouncementServiceService);
+
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable&lt;any&gt; {
+    const id &#x3D; route.paramMap.get(&#x27;id&#x27;);
+
+    if (id &#x3D;&#x3D;&#x3D; null) {
+      console.error(&#x27;No ID provided for details&#x27;);
+      return of(null);
+    }
+
+    return this.announcementService.get(id).pipe(
+      catchError(error &#x3D;&gt; {
+        console.error(&#x27;Fetching details failed&#x27;, error);
+        return of(null);
+      })
+    );
+  }
+}
+</code></pre>
+        </div>
+</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -249,8 +332,8 @@
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-variables';
-            var COMPODOC_CURRENT_PAGE_URL = 'variables.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'guard';
+            var COMPODOC_CURRENT_PAGE_URL = 'DetailsResolverService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

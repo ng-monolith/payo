@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map, Observable } from 'rxjs';
+import { map, Observable, tap } from 'rxjs';
 import ApiUrlsConfig from '../configs/api-urls.config';
 import { Listing, ListingConfig } from '../models/listing';
 

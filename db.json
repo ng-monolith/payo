@@ -1094,6 +1094,99 @@
         "parkingType": "onStreet",
         "energeticCert": true
       }
+    },
+    {
+      "id": "5762",
+      "transactionDetails": {
+        "transactionType": "sell"
+      },
+      "propertyDetails": {
+        "propertyType": "flat",
+        "title": "Mieszkanie Kraków",
+        "description": "Cillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernatur",
+        "locality": "Kraków",
+        "images": ""
+      },
+      "listingDetails": {
+        "marketType": "primary",
+        "adSignature": 49,
+        "exclusiveOffer": true,
+        "noAgentProvision": false,
+        "area": 98,
+        "price": 60,
+        "currency": "EUR",
+        "rooms": 1,
+        "floor": 79,
+        "totalFloors": 62,
+        "elevator": true,
+        "buildingType": "none",
+        "yearBuilt": 80,
+        "conditionType": "none",
+        "parkingType": "none",
+        "energeticCert": true
+      }
+    },
+    {
+      "id": "3cb7",
+      "transactionDetails": {
+        "transactionType": "sell"
+      },
+      "propertyDetails": {
+        "propertyType": "flat",
+        "title": "Esse voluptas eaque",
+        "description": "Rerum duis nemo veri",
+        "locality": "Atque sit voluptatem",
+        "images": ""
+      },
+      "listingDetails": {
+        "marketType": "secondary",
+        "adSignature": 31,
+        "exclusiveOffer": false,
+        "noAgentProvision": false,
+        "area": 62,
+        "price": 21,
+        "currency": "USD",
+        "rooms": 3,
+        "floor": 9,
+        "totalFloors": 33,
+        "elevator": false,
+        "buildingType": "none",
+        "yearBuilt": 51,
+        "conditionType": "highStandard",
+        "parkingType": "onStreet",
+        "energeticCert": true
+      }
+    },
+    {
+      "id": "b115",
+      "transactionDetails": {
+        "transactionType": "sell"
+      },
+      "propertyDetails": {
+        "propertyType": "house",
+        "title": "Sint in velit enim a",
+        "description": "Quaerat excepturi cu",
+        "locality": "Qui ea magna est ob",
+        "images": ""
+      },
+      "listingDetails": {
+        "marketType": "primary",
+        "adSignature": 54,
+        "exclusiveOffer": true,
+        "noAgentProvision": false,
+        "area": 61,
+        "price": 59,
+        "currency": "EUR",
+        "rooms": 93,
+        "floor": 8,
+        "totalFloors": 96,
+        "elevator": true,
+        "buildingType": "block",
+        "yearBuilt": 10,
+        "conditionType": "veryGood",
+        "parkingType": "onFencedGrounds",
+        "energeticCert": true
+      }
     }
   ]
 }

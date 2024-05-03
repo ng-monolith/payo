@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, inject, Input, OnInit } from '@angular/core';
 import { Listing, ListingConfig } from '../../models/listing';
 import { AnnouncementServiceService } from '../../services/announcement-service.service';
 import { CurrencyPipe, NgForOf, TitleCasePipe, UpperCasePipe } from '@angular/common';
@@ -23,7 +23,7 @@ export class ListingComponent implements OnInit {
   @Input() config!: ListingConfig;
   listings: Listing[] = [];
 
-  constructor(private announcementService: AnnouncementServiceService) { }
+  private announcementService = inject(AnnouncementServiceService);
 
   ngOnInit(): void {
     this.announcementService.getAllListings(this.config).subscribe({

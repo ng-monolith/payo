@@ -14,6 +14,12 @@
     </mat-card-header>
     <mat-card-content>
       <p class="text-lg">{{ details.listingDetails.price | currency:details.listingDetails.currency }}</p>
+
+      <h2 class="mt-4">Opis</h2>
+      <p class="description">{{ details.propertyDetails.description }}</p>
+
+      <h2 class="mt-4">Szczegóły</h2>
+
       <div class="grid grid-cols-2 gap-4">
         <div *ngFor="let detail of getDetailsArray(details.listingDetails)" class="py-2">
           <span>{{ detail.value | translateDetails:detail.key }}</span>
