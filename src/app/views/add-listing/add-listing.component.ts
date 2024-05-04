@@ -72,6 +72,9 @@ export class AddListingComponent implements OnInit {
       title: ['', Validators.required],
       description: ['', Validators.required],
       locality: ['', Validators.required],
+      street: ['', Validators.required],
+      fullName: ['', Validators.required],
+      phone: ['', Validators.required],
       images: ['']
     });
     this.thirdFormGroup = this._formBuilder.group({

@@ -5,6 +5,7 @@ export interface ListingConfig {
 
 export interface Listing {
   id: string;
+  userId: string;
   transactionDetails: {
     transactionType: string;
   };
@@ -13,6 +14,9 @@ export interface Listing {
     title: string;
     description: string;
     locality: string;
+    street: string;
+    fullName: string;
+    phone: string;
     images?: [string]
   };
   listingDetails: {

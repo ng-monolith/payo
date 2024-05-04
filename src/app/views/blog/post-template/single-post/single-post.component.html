@@ -1,0 +1,15 @@
+<div class="container mx-auto p-4" *ngIf="post as postData">
+  <mat-card class="card shadow-lg mt-5">
+    <mat-card-header>
+      <mat-card-title class="my-2">{{ postData.title }}</mat-card-title>
+      <mat-card-subtitle class="text-gray-500">Autor: {{ postData.author }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content *ngIf="postData.content">
+      <p class="mb-4">{{ postData.description }}</p>
+      <div *ngFor="let item of postData.content" class="mb-4">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

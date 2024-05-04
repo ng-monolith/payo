@@ -1,1190 +1,291 @@
 {
-  "users": [
+  "posts": [
     {
       "id": "1",
-      "name": "John Doe"
+      "title": "5 wskazówek dla sprzedających nieruchomości",
+      "description": "Oto pięć kluczowych wskazówek, które pomogą Ci sprzedać swoją nieruchomość szybko i skutecznie.",
+      "author": "Jan Kowalski",
+      "content": [
+        {
+          "title": "Rozpocznij od gruntownego przygotowania",
+          "description": "Zacznij od dokładnego przygotowania nieruchomości do sprzedaży, usuwając wszelkie usterki i poprawiając jej wygląd."
+        },
+        {
+          "title": "Ustal atrakcyjną cenę",
+          "description": "Dokładnie przeanalizuj rynek i ustal konkurencyjną, ale atrakcyjną cenę, która przyciągnie potencjalnych kupców."
+        },
+        {
+          "title": "Zainwestuj w marketing",
+          "description": "Wykorzystaj różne kanały marketingowe, takie jak portale nieruchomości, social media i reklamy, aby dotrzeć do jak największej liczby potencjalnych klientów."
+        },
+        {
+          "title": "Przygotuj się na negocjacje",
+          "description": "Bądź gotowy na negocjacje z potencjalnymi kupcami i miej jasno określone swoje minimalne warunki sprzedaży."
+        },
+        {
+          "title": "Skorzystaj z pomocy profesjonalistów",
+          "description": "W razie potrzeby skorzystaj z usług agenta nieruchomości lub prawnika, aby pomóc Ci w procesie sprzedaży."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Jak przygotować nieruchomość do sprzedaży?",
+      "description": "W tym poście omówimy kroki, które warto podjąć, aby przygotować nieruchomość do udanej sprzedaży.",
+      "author": "Anna Nowak",
+      "content": [
+        {
+          "title": "Ocena stanu technicznego",
+          "description": "Zacznij od oceny stanu technicznego nieruchomości, w tym wszystkich instalacji i wykończenia."
+        },
+        {
+          "title": "Drobne naprawy",
+          "description": "Wykonaj niezbędne drobne naprawy, które mogą znacząco podnieść wartość nieruchomości."
+        },
+        {
+          "title": "Home staging",
+          "description": "Rozważ home staging, aby lepiej zaprezentować nieruchomość potencjalnym kupującym."
+        },
+        {
+          "title": "Zdjęcia nieruchomości",
+          "description": "Zainwestuj w profesjonalne zdjęcia, które efektywnie przedstawią nieruchomość w ogłoszeniach."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Najnowsze trendy na rynku nieruchomości",
+      "description": "Sprawdź, jakie są najnowsze trendy na rynku nieruchomości i jak mogą one wpłynąć na Twoją sprzedaż.",
+      "author": "Piotr Wiśniewski",
+      "content": [
+        {
+          "title": "Digitalizacja procesów",
+          "description": "Zwiększone wykorzystanie technologii cyfrowych w procesie kupna-sprzedaży."
+        },
+        {
+          "title": "Zielone budownictwo",
+          "description": "Rosnące zainteresowanie nieruchomościami zrównoważonymi ekologicznie."
+        },
+        {
+          "title": "Mieszkania dla millenialsów",
+          "description": "Projekty nieruchomości dostosowane do potrzeb pokolenia Y."
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Znaczenie profesjonalnych zdjęć w ogłoszeniach o sprzedaży nieruchomości",
+      "description": "Dowiedz się, dlaczego profesjonalne zdjęcia są kluczowe dla skutecznych ogłoszeń o sprzedaży nieruchomości.",
+      "author": "Karolina Lewandowska",
+      "content": [
+        {
+          "title": "Wpływ na pierwsze wrażenie",
+          "description": "Jak jakość zdjęć wpływa na percepcję oferty przez potencjalnych kupujących."
+        },
+        {
+          "title": "Techniki fotograficzne",
+          "description": "Podstawowe techniki, które pomagają wyróżnić twoją nieruchomość."
+        },
+        {
+          "title": "Wirtualne spacery",
+          "description": "Zastosowanie wirtualnych spacerów jako uzupełnienie zdjęć w ofertach."
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Jak ustalić odpowiednią cenę swojej nieruchomości?",
+      "description": "W tym poście podpowiemy Ci, jak ustalić odpowiednią cenę swojej nieruchomości, aby przyciągnąć potencjalnych kupców.",
+      "author": "Michał Adamczyk",
+      "content": [
+        {
+          "title": "Analiza rynku",
+          "description": "Jak analiza rynku lokalnego może pomóc w ustaleniu ceny."
+        },
+        {
+          "title": "Porównanie cen",
+          "description": "Korzystanie z danych o cenach sprzedaży podobnych nieruchomości w okolicy."
+        },
+        {
+          "title": "Czynniki wpływające na cenę",
+          "description": "Jakie czynniki mogą podnieść lub obniżyć cenę nieruchomości."
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "2949",
+      "fullName": "test",
+      "email": "test@wp.pl",
+      "password": "testtest",
+      "acceptTerms": true,
+      "role": "viewer"
+    },
+    {
+      "id": "ed5a",
+      "fullName": "Damian",
+      "email": "test@test.pl",
+      "password": "123",
+      "acceptTerms": true,
+      "role": "admin"
+    },
+    {
+      "id": "c89d",
+      "email": "test@test.pl",
+      "password": "123"
+    },
+    {
+      "id": "ba98",
+      "email": "test@test.pl",
+      "password": "123",
+      "remember": false
+    },
+    {
+      "id": "8941",
+      "email": "test@test.pl",
+      "password": "123",
+      "remember": true
+    },
+    {
+      "id": "18cb",
+      "email": "test@test.pl",
+      "password": "123",
+      "remember": true
+    },
+    {
+      "id": "3568",
+      "email": "test@test.pl",
+      "password": "123",
+      "remember": true
+    },
+    {
+      "id": "9827",
+      "email": "test@test.pl",
+      "password": "123",
+      "remember": true
+    },
+    {
+      "id": "7a1f",
+      "email": "test@test.pl",
+      "password": "123",
+      "remember": true
+    },
+    {
+      "id": "612f",
+      "email": "test@test.pl",
+      "password": "123",
+      "remember": false
+    },
+    {
+      "id": "4709",
+      "email": "test@test.pl",
+      "password": "123",
+      "remember": false
+    },
+    {
+      "id": "1f34",
+      "email": "test@test.pl",
+      "password": "123",
+      "remember": true
+    },
+    {
+      "id": "8a1c",
+      "email": "test@test.pl",
+      "password": "123",
+      "remember": false
+    },
+    {
+      "id": "7bea",
+      "email": "test@test.pl",
+      "password": "123",
+      "remember": false
+    },
+    {
+      "id": "5cc5",
+      "email": "test@test.pl",
+      "password": "123",
+      "remember": true
+    },
+    {
+      "id": "47e4",
+      "email": "test@test.pl",
+      "password": "123",
+      "remember": false
+    },
+    {
+      "id": "1fce",
+      "email": "test@test.pl",
+      "password": "123",
+      "remember": true
     }
   ],
   "announcements": [
     {
-      "id": "4b4e",
+      "id": "0264",
       "transactionDetails": {
         "transactionType": "sell"
       },
       "propertyDetails": {
         "propertyType": "flat",
-        "title": "test",
-        "description": "test"
+        "title": "Mieszkanie Kraków",
+        "description": "Przytulne mieszkanie w samym sercu Krakowa, zaledwie kilka kroków od Rynku Głównego. Składa się z dwóch sypialni, przestronnego salonu oraz w pełni wyposażonej kuchni. Doskonała lokalizacja dla miłośników życia miejskiego i zabytków.",
+        "locality": "Kraków",
+        "street": "Ul. prosta 1",
+        "fullName": "Damian Kacprzak",
+        "phone": "Tel. 555 555.555",
+        "images": ""
       },
       "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": "12",
+        "marketType": "primary",
+        "adSignature": "",
         "exclusiveOffer": true,
         "noAgentProvision": false,
-        "area": 12,
-        "price": 12,
-        "currency": "PLN",
+        "area": 45,
+        "price": 350000,
+        "currency": "EUR",
         "rooms": 2,
-        "floor": "2",
-        "totalFloors": 2,
-        "elevator": true,
-        "buildingType": "kamienica",
-        "yearBuilt": "1201",
-        "conditionType": "b",
-        "parkingType": "b",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "2f20",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "test",
-        "description": "Test",
-        "locality": "Kraków"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": "124",
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 12,
-        "price": 333,
-        "currency": "PLN",
-        "rooms": 2,
-        "floor": "2",
-        "totalFloors": 2,
-        "elevator": true,
-        "buildingType": "2",
-        "yearBuilt": "2",
-        "conditionType": "18",
-        "parkingType": "",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "d5dc",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "test",
-        "description": "test",
-        "locality": "test"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": "Quis nulla sed corru",
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 55,
-        "price": 21,
-        "currency": "PLN",
-        "rooms": 26,
-        "floor": "Enim dolore libero i",
-        "totalFloors": 92,
-        "elevator": true,
-        "buildingType": "0",
-        "yearBuilt": "Quia ea totam natus ",
-        "conditionType": "0",
-        "parkingType": "0",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "5637",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "test",
-        "description": "test",
-        "locality": "test"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": "Quis nulla sed corru",
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 55,
-        "price": 21,
-        "currency": "PLN",
-        "rooms": 26,
-        "floor": "Enim dolore libero i",
-        "totalFloors": 92,
-        "elevator": true,
-        "buildingType": "4",
-        "yearBuilt": "2013",
-        "conditionType": "4",
-        "parkingType": "13",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "ed73",
-      "transactionDetails": {
-        "transactionType": "rent"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Est labore reprehend"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 20,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 2912,
-        "price": 733333,
-        "currency": "PLN",
-        "rooms": 77,
-        "floor": 42,
-        "totalFloors": 9,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 38,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "d18b",
-      "transactionDetails": {
-        "transactionType": "rent"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Est labore reprehend"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 20,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 29,
-        "price": 73,
-        "currency": "PLN",
-        "rooms": 77,
-        "floor": 42,
-        "totalFloors": 9,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 38,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "ad0f",
-      "transactionDetails": {
-        "transactionType": "rent"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Est labore reprehend"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 20,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 29,
-        "price": 73,
-        "currency": "PLN",
-        "rooms": 77,
-        "floor": 42,
-        "totalFloors": 9,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 38,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "cf4a",
-      "transactionDetails": {
-        "transactionType": "rent"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Est labore reprehend"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 20,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 29,
-        "price": 73,
-        "currency": "PLN",
-        "rooms": 77,
-        "floor": 42,
-        "totalFloors": 9,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 38,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "7351",
-      "transactionDetails": {
-        "transactionType": "rent"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Est labore reprehend"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 20,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 29,
-        "price": 73,
-        "currency": "PLN",
-        "rooms": 77,
-        "floor": 42,
-        "totalFloors": 9,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 38,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "fbbc",
-      "transactionDetails": {
-        "transactionType": "rent"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Est labore reprehend"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 20,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 29,
-        "price": 73,
-        "currency": "PLN",
-        "rooms": 77,
-        "floor": 42,
-        "totalFloors": 9,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 38,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "973e",
-      "transactionDetails": {
-        "transactionType": "rent"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Est labore reprehend"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 20,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 29,
-        "price": 73,
-        "currency": "PLN",
-        "rooms": 77,
-        "floor": 42,
-        "totalFloors": 9,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 38,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "f3dd",
-      "transactionDetails": {
-        "transactionType": "rent"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Est labore reprehend"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 20,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 29,
-        "price": 73,
-        "currency": "PLN",
-        "rooms": 77,
-        "floor": 42,
-        "totalFloors": 9,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 38,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "53e3",
-      "transactionDetails": {
-        "transactionType": "rent"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Est labore reprehend"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 20,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 29,
-        "price": 73,
-        "currency": "PLN",
-        "rooms": 77,
-        "floor": 42,
-        "totalFloors": 9,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 38,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "bb2b",
-      "transactionDetails": {
-        "transactionType": "rent"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Est labore reprehend"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 20,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 29,
-        "price": 73,
-        "currency": "PLN",
-        "rooms": 77,
-        "floor": 42,
-        "totalFloors": 9,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 38,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "4f44",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Est labore reprehend"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 20,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 29,
-        "price": 73,
-        "currency": "PLN",
-        "rooms": 77,
-        "floor": 42,
-        "totalFloors": 9,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 38,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "1b90",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Est labore reprehend"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 10,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 1,
-        "price": 14,
-        "currency": "PLN",
-        "rooms": 59,
         "floor": 2,
-        "totalFloors": 56,
+        "totalFloors": 3,
         "elevator": true,
         "buildingType": "block",
-        "yearBuilt": 81,
+        "yearBuilt": 2012,
         "conditionType": "highStandard",
         "parkingType": "onStreet",
         "energeticCert": true
       }
     },
     {
-      "id": "722b",
+      "id": "22c7",
       "transactionDetails": {
-        "transactionType": "sell"
+        "transactionType": "rent"
       },
       "propertyDetails": {
         "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Est labore reprehend"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 81,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 49,
-        "price": 13,
-        "currency": "PLN",
-        "rooms": 73,
-        "floor": 100,
-        "totalFloors": 50,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 53,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "71da",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Est labore reprehend"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 14,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 27,
-        "price": 49,
-        "currency": "PLN",
-        "rooms": 98,
-        "floor": 97,
-        "totalFloors": 64,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 14,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "e824",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Gdańsk"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 14,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 27,
-        "price": 49,
-        "currency": "PLN",
-        "rooms": 98,
-        "floor": 97,
-        "totalFloors": 64,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 14,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "a564",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Gdańsk"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 14,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 27,
-        "price": 49,
-        "currency": "PLN",
-        "rooms": 98,
-        "floor": 97,
-        "totalFloors": 64,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 14,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "72cf",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Poznań"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 14,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 27,
-        "price": 49,
-        "currency": "PLN",
-        "rooms": 98,
-        "floor": 97,
-        "totalFloors": 64,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 14,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "a635",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Poznań"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 14,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 27,
-        "price": 49,
-        "currency": "PLN",
-        "rooms": 98,
-        "floor": 97,
-        "totalFloors": 64,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 14,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "bcf0",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Bydgoszcz"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 86,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 82,
-        "price": 29,
-        "currency": "PLN",
-        "rooms": 12,
-        "floor": 14,
-        "totalFloors": 81,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 2,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "8477",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Bydgoszcz"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 86,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 82,
-        "price": 29,
-        "currency": "PLN",
-        "rooms": 12,
-        "floor": 14,
-        "totalFloors": 81,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 2,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "d324",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Bydgoszcz"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 86,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 82,
-        "price": 29,
-        "currency": "PLN",
-        "rooms": 12,
-        "floor": 14,
-        "totalFloors": 81,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 2,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "21cd",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Minima in est ut eiu",
-        "description": "Sed culpa ea volupta",
-        "locality": "Bydgoszcz"
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 86,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 82,
-        "price": 29,
-        "currency": "PLN",
-        "rooms": 12,
-        "floor": 14,
-        "totalFloors": 81,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 2,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "44f1",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Maxime perspiciatis",
-        "description": "Qui enim excepteur s",
+        "title": "Mieszkanie Kraków",
+        "description": "Przytulne mieszkanie w samym sercu Krakowa, zaledwie kilka kroków od Rynku Głównego. Składa się z dwóch sypialni, przestronnego salonu oraz w pełni wyposażonej kuchni. Doskonała lokalizacja dla miłośników życia miejskiego i zabytków.",
         "locality": "Kraków",
+        "street": "Ul. prosta 1",
+        "fullName": "Damian Kacprzak",
+        "phone": "Tel. 555 555.555",
         "images": ""
       },
       "listingDetails": {
         "marketType": "primary",
-        "adSignature": 11,
+        "adSignature": "",
         "exclusiveOffer": true,
         "noAgentProvision": false,
-        "area": 60,
-        "price": 35,
-        "currency": "PLN",
-        "rooms": 1,
-        "floor": 55,
-        "totalFloors": 89,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 87,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "7abc",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Maxime perspiciatis",
-        "description": "Qui enim excepteur s",
-        "locality": "Kraków",
-        "images": ""
-      },
-      "listingDetails": {
-        "marketType": "primary",
-        "adSignature": 11,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 60,
-        "price": 35,
-        "currency": "PLN",
-        "rooms": 1,
-        "floor": 55,
-        "totalFloors": 89,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 87,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "80d3",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "house",
-        "title": "Incididunt natus aut",
-        "description": "Doloremque mollitia ",
-        "locality": "Omnis reprehenderit",
-        "images": ""
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 64,
-        "exclusiveOffer": false,
-        "noAgentProvision": false,
-        "area": 9,
-        "price": 48,
-        "currency": "PLN",
-        "rooms": 56,
-        "floor": 40,
-        "totalFloors": 70,
-        "elevator": false,
-        "buildingType": "none",
-        "yearBuilt": 82,
-        "conditionType": "none",
-        "parkingType": "none",
-        "energeticCert": false
-      }
-    },
-    {
-      "id": "7662",
-      "transactionDetails": {
-        "transactionType": "exchange"
-      },
-      "propertyDetails": {
-        "propertyType": "house",
-        "title": "Aliquam consequatur",
-        "description": "Inventore repudianda",
-        "locality": "Accusamus iusto volu",
-        "images": ""
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 31,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 39,
-        "price": 28,
-        "currency": "PLN",
-        "rooms": 16,
-        "floor": 76,
-        "totalFloors": 25,
-        "elevator": false,
-        "buildingType": "block",
-        "yearBuilt": 12,
-        "conditionType": "none",
-        "parkingType": "none",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "ecdd",
-      "transactionDetails": {
-        "transactionType": "buy"
-      },
-      "propertyDetails": {
-        "propertyType": "house",
-        "title": "Voluptas quia dolore",
-        "description": "Optio voluptas enim",
-        "locality": "Tempore sunt in vel",
-        "images": ""
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 22,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 1,
-        "price": 33,
+        "area": 45,
+        "price": 2000,
         "currency": "EUR",
-        "rooms": 77,
-        "floor": 5,
-        "totalFloors": 37,
-        "elevator": false,
-        "buildingType": "none",
-        "yearBuilt": 65,
-        "conditionType": "veryGood",
-        "parkingType": "onFencedGrounds",
-        "energeticCert": false
-      }
-    },
-    {
-      "id": "739b",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Nam natus dolor enim",
-        "description": "Quam rerum repellend",
-        "locality": "Dignissimos sed dolo",
-        "images": ""
-      },
-      "listingDetails": {
-        "marketType": "primary",
-        "adSignature": 98,
-        "exclusiveOffer": false,
-        "noAgentProvision": false,
-        "area": 27,
-        "price": 15,
-        "currency": "EUR",
-        "rooms": 10,
-        "floor": 79,
-        "totalFloors": 42,
-        "elevator": false,
-        "buildingType": "none",
-        "yearBuilt": 10,
-        "conditionType": "none",
-        "parkingType": "none",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "3f67",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Mieszkanie Kraków",
-        "description": "Do qui pariatur Lab",
-        "locality": "Kraków",
-        "images": ""
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 3,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 57,
-        "price": 16,
-        "currency": "PLN",
-        "rooms": 78,
-        "floor": 99,
-        "totalFloors": 56,
-        "elevator": true,
-        "buildingType": "none",
-        "yearBuilt": 55,
-        "conditionType": "highStandard",
-        "parkingType": "inUndergroundGarage",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "8a77",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Mieszkanie Kraków",
-        "description": "Et architecto saepe ",
-        "locality": "Kraków",
-        "images": ""
-      },
-      "listingDetails": {
-        "marketType": "primary",
-        "adSignature": 31,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 60,
-        "price": 30,
-        "currency": "PLN",
-        "rooms": 20,
-        "floor": 49,
-        "totalFloors": 43,
+        "rooms": 2,
+        "floor": 2,
+        "totalFloors": 3,
         "elevator": true,
         "buildingType": "block",
-        "yearBuilt": 57,
+        "yearBuilt": 2012,
         "conditionType": "highStandard",
         "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "b540",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Mieszkanie Kraków",
-        "description": "Et architecto saepe ",
-        "locality": "Kraków",
-        "images": ""
-      },
-      "listingDetails": {
-        "marketType": "primary",
-        "adSignature": 31,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 60,
-        "price": 30,
-        "currency": "PLN",
-        "rooms": 20,
-        "floor": 49,
-        "totalFloors": 43,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 57,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "d3d4",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Mieszkanie Kraków",
-        "description": "Et architecto saepe ",
-        "locality": "Kraków",
-        "images": ""
-      },
-      "listingDetails": {
-        "marketType": "primary",
-        "adSignature": 31,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 60,
-        "price": 30,
-        "currency": "PLN",
-        "rooms": 20,
-        "floor": 49,
-        "totalFloors": 43,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 57,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "5762",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Mieszkanie Kraków",
-        "description": "Cillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernaturCillum et aspernatur",
-        "locality": "Kraków",
-        "images": ""
-      },
-      "listingDetails": {
-        "marketType": "primary",
-        "adSignature": 49,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 98,
-        "price": 60,
-        "currency": "EUR",
-        "rooms": 1,
-        "floor": 79,
-        "totalFloors": 62,
-        "elevator": true,
-        "buildingType": "none",
-        "yearBuilt": 80,
-        "conditionType": "none",
-        "parkingType": "none",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "3cb7",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "flat",
-        "title": "Esse voluptas eaque",
-        "description": "Rerum duis nemo veri",
-        "locality": "Atque sit voluptatem",
-        "images": ""
-      },
-      "listingDetails": {
-        "marketType": "secondary",
-        "adSignature": 31,
-        "exclusiveOffer": false,
-        "noAgentProvision": false,
-        "area": 62,
-        "price": 21,
-        "currency": "USD",
-        "rooms": 3,
-        "floor": 9,
-        "totalFloors": 33,
-        "elevator": false,
-        "buildingType": "none",
-        "yearBuilt": 51,
-        "conditionType": "highStandard",
-        "parkingType": "onStreet",
-        "energeticCert": true
-      }
-    },
-    {
-      "id": "b115",
-      "transactionDetails": {
-        "transactionType": "sell"
-      },
-      "propertyDetails": {
-        "propertyType": "house",
-        "title": "Sint in velit enim a",
-        "description": "Quaerat excepturi cu",
-        "locality": "Qui ea magna est ob",
-        "images": ""
-      },
-      "listingDetails": {
-        "marketType": "primary",
-        "adSignature": 54,
-        "exclusiveOffer": true,
-        "noAgentProvision": false,
-        "area": 61,
-        "price": 59,
-        "currency": "EUR",
-        "rooms": 93,
-        "floor": 8,
-        "totalFloors": 96,
-        "elevator": true,
-        "buildingType": "block",
-        "yearBuilt": 10,
-        "conditionType": "veryGood",
-        "parkingType": "onFencedGrounds",
         "energeticCert": true
       }
     }

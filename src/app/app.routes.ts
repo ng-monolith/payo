@@ -8,18 +8,21 @@ import { SettingsComponent } from './views/settings/settings.component';
 import { LoginComponent } from './views/auth/login/login.component';
 import { RegisterComponent } from './views/auth/register/register.component';
 import { PageNotFoundComponent } from './views/auth/page-not-found/page-not-found.component';
-import { SellComponent } from './views/sell/sell/sell.component';
+import { BlogComponent } from './views/blog/blog/blog.component';
 import { DetailsComponent } from '../shared/payo-table/details/details.component';
 import { AnnouncementsComponent } from './views/announcements/announcements.component';
 import { ForgotComponent } from './views/auth/forgot/forgot.component';
 import { DetailsResolverService } from '../shared/Resolvers/details-resolver.resolver';
+import { SinglePostComponent } from './views/blog/post-template/single-post/single-post.component';
+import { SinglePostResolver } from '../shared/Resolvers/single-post.resolver';
 
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'buy', component: BuyComponent },
   { path: 'rent', component: RentComponent },
-  { path: 'sell', component: SellComponent },
+  { path: 'blog', component: BlogComponent },
+  { path: 'blog/:id', component: SinglePostComponent, resolve: { blog: SinglePostResolver } },
   { path: 'my-account', component: MyAccountComponent },
   { path: 'add-listing', component: AddListingComponent },
   { path: 'settings', component: SettingsComponent },

@@ -1,5 +1,5 @@
 export interface TransactionDetails {
-  transactionType: 'sell' | 'rent';
+  transactionType: 'blog' | 'rent';
 }
 
 export interface PropertyDetails {
@@ -7,6 +7,9 @@ export interface PropertyDetails {
   title: string;
   description: string;
   locality: string;
+  street: string;
+  fullName: string;
+  phone: string;
 }
 
 export interface ListingDetails {

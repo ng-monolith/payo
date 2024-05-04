@@ -8,9 +8,6 @@
       <mat-radio-group aria-label="Wybierz typ transakcji" formControlName="transactionType">
         <mat-radio-button value="sell">Sprzedam</mat-radio-button>
         <mat-radio-button value="rent">Wynajmę</mat-radio-button>
-        <mat-radio-button value="buy">Kupie</mat-radio-button>
-        <mat-radio-button value="exchange">Zamienie</mat-radio-button>
-        <mat-radio-button value="other">Inna</mat-radio-button>
       </mat-radio-group>
 
       <div class="buttons-wrapper">
@@ -36,6 +33,21 @@
         <mat-form-field>
           <mat-label>Lokalizacja</mat-label>
           <input matInput formControlName="locality" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Ulica</mat-label>
+          <input matInput formControlName="street" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Imię i Nazwisko</mat-label>
+          <input matInput formControlName="fullName" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Telefon</mat-label>
+          <input matInput formControlName="phone" required>
         </mat-form-field>
 
         <mat-form-field>

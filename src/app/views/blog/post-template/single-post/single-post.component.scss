@@ -1,0 +1,34 @@
+@import "variables";
+@import "mixins";
+@import "typography";
+
+
+.container {
+  max-width: 1200px;
+  margin: 50px auto;
+  mat-card-title {
+    @include title-v3;
+  }
+}
+
+.card {
+  margin-top: 20px;
+  border-radius: 0.5rem;
+}
+mat-card-header {
+  padding-bottom: 50px;
+}
+
+.mat-card-title {
+  margin-top: -8px;
+}
+
+mat-card-content{
+  padding-top: 0;
+  h3 {
+    @include title-v4;
+  }
+  p {
+    @include body-v2;
+  }
+}

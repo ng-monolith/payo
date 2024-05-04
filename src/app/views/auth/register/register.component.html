@@ -24,6 +24,7 @@
           <button type="submit" class="w-full mt-5 btn btn-primary sm:w-auto sm:mt-0" [disabled]="!registerForm.valid">Zajestruj się</button>
         </div>
       </form>
+      <p *ngIf="errorMessage" class="text-red-500">{{ errorMessage }}</p>
     </div>
     <p class="my-0 text-xs font-medium text-center text-gray-700 sm:my-5">
       Masz już konto?
