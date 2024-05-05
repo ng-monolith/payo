@@ -20,6 +20,9 @@ import { SearchComponent } from '../../../shared/components/search/search.compon
 import { AnnouncementServiceService } from '../../../shared/services/announcement-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ListingDetails, PropertyDetails, TransactionDetails } from '../../../shared/models/announcement.dto';
+import { UserService } from '../../../shared/services/user.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-listing',
@@ -58,10 +61,13 @@ export class AddListingComponent implements OnInit {
   firstFormGroup!: FormGroup;
   secondFormGroup!: FormGroup;
   thirdFormGroup!: FormGroup;
+  currentUser!: any;
 
-
+  private userService = inject(UserService);
   private _formBuilder = inject(FormBuilder);
   private announcementService = inject(AnnouncementServiceService);
+  private snackBar = inject(MatSnackBar);
+  private router = inject(Router);
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
@@ -95,27 +101,48 @@ export class AddListingComponent implements OnInit {
       parkingType: ['none'],
       energeticCert: [false],
     });
+    this.getCurrentUser();
+  }
+
+  private getCurrentUser(): void {
+    this.userService.currentUser.subscribe(user => {
+      this.currentUser = user;
+    });
   }
 
   onSubmit() {
     if (this.firstFormGroup.valid && this.secondFormGroup.valid && this.thirdFormGroup.valid) {
       const combinedData = {
+        userId: this.currentUser?.id,
         transactionDetails: this.firstFormGroup.value as TransactionDetails,
         propertyDetails: this.secondFormGroup.value as PropertyDetails,
         listingDetails: this.thirdFormGroup.value as ListingDetails
       };
 
       this.announcementService.save(combinedData).subscribe({
-        next: (response) => {
-          console.log('Data sent successfully:', response);
+        next: () => {
+          this.snackBar.open('Ogłoszenie zostało dodane pomyślnie.', 'Zamknij', {
+            duration: 5000,
+          });
+          this.resetForms();
+          this.router.navigate(['/success']);
         },
         error: (error) => {
+          this.snackBar.open('Nie udało się dodać ogłoszenia. Spróbuj ponownie.', 'Zamknij', {
+            duration: 5000,
+          });
           console.error('Failed to send data:', error);
         }
       });
     } else {
-      console.error('One or more forms are invalid.');
+      this.snackBar.open('Formularz zawiera błędy. Sprawdź wszystkie dane.', 'Zamknij', {
+        duration: 5000,
+      });
     }
   }
-
+  private resetForms() {
+    this.firstFormGroup.reset();
+    this.secondFormGroup.reset();
+    this.thirdFormGroup.reset();
+  }
 }

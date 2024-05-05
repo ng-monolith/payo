@@ -1,5 +1,5 @@
 <mat-toolbar class="navigation">
-  <img routerLink="" src="/assets/images/logo.svg" alt="Logo" style="height: 20px;">
+  <img routerLink="/" src="/assets/images/logo.svg" alt="Logo" style="height: 20px;">
 
   <span style="flex: 1 1 auto;"></span>
 
@@ -7,19 +7,29 @@
   <button mat-button routerLink="/rent">Wynajmuję</button>
   <button mat-button routerLink="/blog">Blog</button>
 
-  <button mat-button [matMenuTriggerFor]="accountMenu">
-    <mat-icon>person</mat-icon>
-    Moje konto
-  </button>
+  <ng-container *ngIf="(currentUser$ | async) as currentUser; else notLoggedIn">
+    <button mat-button [matMenuTriggerFor]="accountMenu" *ngIf="currentUser">
+      <mat-icon>person</mat-icon>
+      Moje konto
+    </button>
+  </ng-container>
 
   <mat-menu class="dropdown-menu" #accountMenu="matMenu">
     <span class="active-user">
-      <span><mat-icon>person</mat-icon> {{ 'test@user.pl' }}</span>
+      {{ (currentUser$ | async)?.email }}
     </span>
     <button mat-menu-item routerLink="/announcements">Ogłoszenia</button>
     <button mat-menu-item routerLink="/settings">Ustawienia</button>
-    <button mat-menu-item routerLink="/logout">Wyloguj</button>
+    <button mat-menu-item (click)="logout()">Wyloguj się</button>
   </mat-menu>
 
-  <button mat-flat-button color="accent" routerLink="/add-listing">Dodaj ogłoszenie</button>
+  <button mat-flat-button color="accent" (click)="navigateToAddListing()">Dodaj ogłoszenie</button>
+
 </mat-toolbar>
+
+<ng-template #notLoggedIn>
+  <button mat-button routerLink="/login">
+    <mat-icon>person</mat-icon>
+    Moje Konto
+  </button>
+</ng-template>

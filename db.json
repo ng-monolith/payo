@@ -129,95 +129,6 @@
       "password": "123",
       "acceptTerms": true,
       "role": "admin"
-    },
-    {
-      "id": "c89d",
-      "email": "test@test.pl",
-      "password": "123"
-    },
-    {
-      "id": "ba98",
-      "email": "test@test.pl",
-      "password": "123",
-      "remember": false
-    },
-    {
-      "id": "8941",
-      "email": "test@test.pl",
-      "password": "123",
-      "remember": true
-    },
-    {
-      "id": "18cb",
-      "email": "test@test.pl",
-      "password": "123",
-      "remember": true
-    },
-    {
-      "id": "3568",
-      "email": "test@test.pl",
-      "password": "123",
-      "remember": true
-    },
-    {
-      "id": "9827",
-      "email": "test@test.pl",
-      "password": "123",
-      "remember": true
-    },
-    {
-      "id": "7a1f",
-      "email": "test@test.pl",
-      "password": "123",
-      "remember": true
-    },
-    {
-      "id": "612f",
-      "email": "test@test.pl",
-      "password": "123",
-      "remember": false
-    },
-    {
-      "id": "4709",
-      "email": "test@test.pl",
-      "password": "123",
-      "remember": false
-    },
-    {
-      "id": "1f34",
-      "email": "test@test.pl",
-      "password": "123",
-      "remember": true
-    },
-    {
-      "id": "8a1c",
-      "email": "test@test.pl",
-      "password": "123",
-      "remember": false
-    },
-    {
-      "id": "7bea",
-      "email": "test@test.pl",
-      "password": "123",
-      "remember": false
-    },
-    {
-      "id": "5cc5",
-      "email": "test@test.pl",
-      "password": "123",
-      "remember": true
-    },
-    {
-      "id": "47e4",
-      "email": "test@test.pl",
-      "password": "123",
-      "remember": false
-    },
-    {
-      "id": "1fce",
-      "email": "test@test.pl",
-      "password": "123",
-      "remember": true
     }
   ],
   "announcements": [
@@ -287,6 +198,145 @@
         "conditionType": "highStandard",
         "parkingType": "onStreet",
         "energeticCert": true
+      }
+    },
+    {
+      "id": "048d",
+      "userId": "ed5a",
+      "transactionDetails": {
+        "transactionType": "sell"
+      },
+      "propertyDetails": {
+        "propertyType": "house",
+        "title": "Quasi tempora amet ",
+        "description": "Dolores dolor iste p",
+        "locality": "Et commodo nesciunt",
+        "street": "Non dolorem optio e",
+        "fullName": "Ut et voluptatem as",
+        "phone": "Et quo in quis ex ma",
+        "images": ""
+      },
+      "listingDetails": {
+        "marketType": "primary",
+        "adSignature": 12,
+        "exclusiveOffer": false,
+        "noAgentProvision": false,
+        "area": 33,
+        "price": 41,
+        "currency": "PLN",
+        "rooms": 81,
+        "floor": 59,
+        "totalFloors": 77,
+        "elevator": false,
+        "buildingType": "none",
+        "yearBuilt": 71,
+        "conditionType": "none",
+        "parkingType": "none",
+        "energeticCert": false
+      }
+    },
+    {
+      "id": "fc26",
+      "userId": "ed5a",
+      "transactionDetails": {
+        "transactionType": "sell"
+      },
+      "propertyDetails": {
+        "propertyType": "house",
+        "title": "Reiciendis laboris q",
+        "description": "Nobis fugiat consect",
+        "locality": "In rerum voluptate c",
+        "street": "Qui officia exercita",
+        "fullName": "Duis minus quos accu",
+        "phone": "Dolorem id sed maxi",
+        "images": null
+      },
+      "listingDetails": {
+        "marketType": "primary",
+        "adSignature": 17,
+        "exclusiveOffer": null,
+        "noAgentProvision": null,
+        "area": 83,
+        "price": 41,
+        "currency": "EUR",
+        "rooms": 57,
+        "floor": 12,
+        "totalFloors": 23,
+        "elevator": null,
+        "buildingType": "detachedHouse",
+        "yearBuilt": 60,
+        "conditionType": "veryGood",
+        "parkingType": "inUndergroundGarage",
+        "energeticCert": null
+      }
+    },
+    {
+      "id": "b581",
+      "transactionDetails": {
+        "transactionType": "sell"
+      },
+      "propertyDetails": {
+        "propertyType": "flat",
+        "title": "Omnis ut deserunt om",
+        "description": "Voluptate ut nobis a",
+        "locality": "Neque facilis amet ",
+        "street": "Molestias velit non ",
+        "fullName": "Labore ad tempor qui",
+        "phone": "Rerum velit molestia",
+        "images": ""
+      },
+      "listingDetails": {
+        "marketType": "secondary",
+        "adSignature": 58,
+        "exclusiveOffer": true,
+        "noAgentProvision": false,
+        "area": 40,
+        "price": 54,
+        "currency": "PLN",
+        "rooms": 40,
+        "floor": 31,
+        "totalFloors": 83,
+        "elevator": true,
+        "buildingType": "none",
+        "yearBuilt": 74,
+        "conditionType": "none",
+        "parkingType": "none",
+        "energeticCert": true
+      }
+    },
+    {
+      "id": "8c7b",
+      "userId": "ed5a",
+      "transactionDetails": {
+        "transactionType": "sell"
+      },
+      "propertyDetails": {
+        "propertyType": "house",
+        "title": "Id in eaque soluta q",
+        "description": "Nihil dolores dolore",
+        "locality": "Voluptate nemo in re",
+        "street": "Aperiam anim volupta",
+        "fullName": "In fugiat possimus ",
+        "phone": "Iste vel voluptatem ",
+        "images": ""
+      },
+      "listingDetails": {
+        "marketType": "primary",
+        "adSignature": 43,
+        "exclusiveOffer": false,
+        "noAgentProvision": false,
+        "area": 49,
+        "price": 67,
+        "currency": "EUR",
+        "rooms": 96,
+        "floor": 54,
+        "totalFloors": 7,
+        "elevator": false,
+        "buildingType": "none",
+        "yearBuilt": 47,
+        "conditionType": "none",
+        "parkingType": "none",
+        "energeticCert": false
       }
     }
   ]

@@ -4,7 +4,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { HeaderComponent } from '../../../../shared/components/header/header.component';
 import { UserService } from '../../../../shared/services/user.service';
 
@@ -26,11 +26,12 @@ import { UserService } from '../../../../shared/services/user.service';
 export class LoginComponent implements OnInit {
 
   private userService = inject(UserService);
+  private router = inject(Router);
 
   loginForm = new FormGroup({
-    email: new FormControl('', [Validators.required]),
-    password: new FormControl('', [Validators.required]),
-    remember: new FormControl(false)
+    email: new FormControl('', {nonNullable: true, validators: [Validators.required, Validators.email]}),
+    password: new FormControl('', {nonNullable: true, validators: [Validators.required] }),
+    remember: new FormControl(false, {nonNullable: true})
   });
 
   ngOnInit(): void {
@@ -59,7 +60,7 @@ export class LoginComponent implements OnInit {
       this.userService.loginUser(email, password, remember).subscribe({
         next: response => {
           localStorage.setItem('user', JSON.stringify(response));
-          console.log('Login successful:', response);
+          this.router.navigate(['/']);
         },
         error: error => console.error('Login error:', error)
       });

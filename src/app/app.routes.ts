@@ -15,6 +15,7 @@ import { ForgotComponent } from './views/auth/forgot/forgot.component';
 import { DetailsResolverService } from '../shared/Resolvers/details-resolver.resolver';
 import { SinglePostComponent } from './views/blog/post-template/single-post/single-post.component';
 import { SinglePostResolver } from '../shared/Resolvers/single-post.resolver';
+import { SuccessPageComponent } from './views/success-page/success-page.component';
 
 
 export const routes: Routes = [
@@ -30,6 +31,7 @@ export const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'announcements', component: AnnouncementsComponent },
   { path: 'forgot', component: ForgotComponent },
+  { path: 'success', component: SuccessPageComponent },
   { path: 'details/:id', component: DetailsComponent, resolve: { details: DetailsResolverService } },
   { path: '**', component: PageNotFoundComponent }
 ];
