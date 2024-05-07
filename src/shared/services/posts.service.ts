@@ -4,11 +4,16 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import ApiUrlsConfig from '../configs/api-urls.config';
 import { Post } from '../models/post';
+import { collection, Firestore } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
+  firestore = inject(Firestore);
+  postsCollection = collection(this.firestore, 'posts');
+
+
   private apiUrl = ApiUrlsConfig.posts;
   private http = inject(HttpClient);
 

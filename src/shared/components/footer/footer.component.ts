@@ -38,9 +38,11 @@ export class FooterComponent implements OnInit {
           this.router.navigate(['/newsletter-success']);
         },
         (error) => {
-          console.log('Wystąpił błąd podczas zapisywania do newslettera, spróbuj ponownie.', error);
+          console.error('Wystąpił błąd podczas zapisywania do newslettera, spróbuj ponownie.', error);
         }
       );
+    } else {
+      console.error('Formularz zawiera błędy. Sprawdź wszystkie dane.');
     }
   }
 }

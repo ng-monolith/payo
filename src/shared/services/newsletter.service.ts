@@ -1,17 +1,17 @@
 import { inject, Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environment/environment';
+import { Firestore, addDoc, collection } from '@angular/fire/firestore';
+import { Observable, from } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NewsletterService {
-  private apiUrl = environment.apiUrl;
+  firestore = inject(Firestore);
+  newsletterCollection = collection(this.firestore, 'newsletters');
 
-  private http = inject(HttpClient);
+  constructor() {}
 
-  send(email: string) {
-    const url = `${this.apiUrl}/newsletters`;
-    return this.http.post(url, { email });
+  send(email: string): Observable<any> {
+    return from(addDoc(this.newsletterCollection, { email }));
   }
 }

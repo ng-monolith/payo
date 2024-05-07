@@ -5,7 +5,6 @@ export interface User {
   password: string;
   acceptTerms: boolean;
   role: UserRole;
-  remember?: boolean;
 }
 
 export enum UserRole {
