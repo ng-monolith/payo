@@ -9,6 +9,57 @@
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 
+  .carousel {
+    img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+  }
+  ::ng-deep mat-card-header {
+    padding-bottom: 10px;
+    .mat-mdc-card-header-text {
+      display: none !important;
+    }
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .arrow-box {
+    margin-left: 24px;
+    display: flex;
+    column-gap: 8px;
+  }
+
+  .arrow-right,
+  .arrow-left {
+    position: relative;
+    @include box(40px, 40px);
+
+    &::after {
+      content: '';
+      position: absolute;
+      @include box(40px, 40px);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .arrow-right {
+    &:after {
+      background-image: url('/assets/images/arrow-right.svg');
+    }
+  }
+
+  .arrow-left {
+    &:after {
+      content: '';
+      background-image: url('/assets/images/arrow-left.svg');
+    }
+  }
+
+
   header {
     border-bottom: 1px solid #eaeaea;
     padding-bottom: 20px;

@@ -3,7 +3,7 @@
     <div class="col-span-3">
       <img class="pb-3" routerLink="/home" src="/assets/images/logo.svg" alt="Logo" style="height: 30px;">
       <p class="my-4 text-xs leading-normal text-gray-500">
-        Zintegruj kwitnącą społeczność, gdziekolwiek są Twoi odbiorcy, a wszystko to pod własną marką.
+        Zapewniamy innowacyjny portal nieruchomości, który łączy sprzedawców i kupujących, oferując najatrakcyjniejsze oferty.
       </p>
       <label class="flex w-24">
         <span class="sr-only">Select a language</span>
@@ -14,33 +14,31 @@
       </label>
     </div>
     <nav class="col-span-1 md:col-span-1 lg:col-span-2">
-      <p class="mb-3 text-xs font-semibold tracking-wider text-gray-400 uppercase">Ogłoszenia</p>
-      <a href="#" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Funkcje</a>
-      <a href="#" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Imtegracje</a>
-      <a href="#" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Dokumentacja</a>
-      <a href="#" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">FAQs</a>
-      <a href="#" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Cennik</a>
+      <p routerLink="/announcements" class="mb-3 text-xs font-semibold tracking-wider text-gray-400 uppercase">Ogłoszenia</p>
+      <a routerLink="/features" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Funkcje</a>
+      <a routerLink="/integrations" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Integracje</a>
+      <a routerLink="/documentation" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Dokumentacja</a>
+      <a routerLink="/faq" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">FAQs</a>
+      <a routerLink="/pricing" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Cennik</a>
     </nav>
     <nav class="col-span-1 md:col-span-1 lg:col-span-2">
       <p class="mb-3 text-xs font-semibold tracking-wider text-gray-400 uppercase">O nas</p>
-      <a href="#" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Press-Kit</a>
-      <a href="#" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Firma</a>
-      <a href="#" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Prywatność</a>
-      <a href="#" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Blog</a>
+      <a href="/press-kit" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Press-Kit</a>
+      <a href="/company" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Firma</a>
+      <a href="/privacy" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Prywatność</a>
+      <a href="/blog" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Blog</a>
     </nav>
     <nav class="col-span-2 md:col-span-1 lg:col-span-2">
       <p class="mb-3 text-xs font-semibold tracking-wider text-gray-400 uppercase">Kontakt</p>
-      <a href="#" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Twitter</a>
-      <a href="#" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Instagram</a>
-      <a href="#" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Email</a>
-      <a href="#" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Reklama</a>
-      <a href="#" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Chat</a>
+      <a href="https://twitter.com/" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Twitter</a>
+      <a href="https://www.instagram.com/" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Instagram</a>
+      <a routerLink="/contact" class="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-primary">Kontakt</a>
     </nav>
     <div class="col-span-3">
       <p class="mb-3 text-xs font-semibold tracking-wider text-gray-400 uppercase">ZAPISZ SIĘ DO NEWSLETTER</p>
-      <form action="#" class="mb-2">
+      <form (ngSubmit)="onSubmit()" [formGroup]="newsletterForm">
         <div class="form-append">
-          <input class="form-input form-input-sm" type="email" placeholder="Wpisz swój email" />
+          <input class="form-input form-input-sm" type="email" formControlName="email" placeholder="Wpisz swój email" required/>
           <button class="btn btn-light-primary btn-sm" type="submit">Subskrybuj</button>
         </div>
       </form>
@@ -50,8 +48,8 @@
   <div class="flex flex-col items-start justify-between pt-10 mt-10 border-t border-gray-100 md:flex-row md:items-center">
     <p class="mb-6 text-sm text-left text-gray-600 md:mb-0">© Copyright 2024. Wszelkie prawa zastrzeżone.</p>
     <div class="flex items-start justify-start space-x-6 md:items-center md:justify-center">
-      <a href="#" class="text-sm text-gray-600 transition hover:text-primary">Regulamin</a>
-      <a href="#" class="text-sm text-gray-600 transition hover:text-primary">Prywatność</a>
+      <a routerLink="/terms"  class="text-sm text-gray-600 transition hover:text-primary">Regulamin</a>
+      <a routerLink="/privacy" class="text-sm text-gray-600 transition hover:text-primary">Prywatność</a>
     </div>
   </div>
 </footer>

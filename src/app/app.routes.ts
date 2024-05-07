@@ -15,7 +15,20 @@ import { ForgotComponent } from './views/auth/forgot/forgot.component';
 import { DetailsResolverService } from '../shared/Resolvers/details-resolver.resolver';
 import { SinglePostComponent } from './views/blog/post-template/single-post/single-post.component';
 import { SinglePostResolver } from '../shared/Resolvers/single-post.resolver';
-import { SuccessPageComponent } from './views/success-page/success-page.component';
+import { SuccessPageComponent } from './views/pages/success-page/success-page.component';
+import { FeaturesComponent } from './views/pages/features/features.component';
+import { IntegrationsComponent } from './views/pages/integrations/integrations.component';
+import { DocumentationComponent } from './views/pages/documentation/documentation.component';
+import { FaqComponent } from './views/pages/faq/faq.component';
+import { PricingComponent } from './views/pages/pricing/pricing.component';
+import { TermsComponent } from './views/pages/terms/terms.component';
+import { PrivacyPolicyComponent } from './views/pages/privacy-policy/privacy-policy.component';
+import { CompanyComponent } from './views/pages/company/company.component';
+import { PressKitComponent } from './views/pages/press-kit/press-kit.component';
+import { ContactComponent } from './views/pages/contact/contact.component';
+import {
+  NewsletterSuccessPageComponent
+} from './views/pages/newsletter-success-page/newsletter-success-page.component';
 
 
 export const routes: Routes = [
@@ -33,5 +46,16 @@ export const routes: Routes = [
   { path: 'forgot', component: ForgotComponent },
   { path: 'success', component: SuccessPageComponent },
   { path: 'details/:id', component: DetailsComponent, resolve: { details: DetailsResolverService } },
+  { path: 'features', component: FeaturesComponent },
+  { path: 'integrations', component: IntegrationsComponent },
+  { path: 'documentation', component: DocumentationComponent },
+  { path: 'faq', component: FaqComponent },
+  { path: 'pricing', component: PricingComponent },
+  { path: 'terms', component: TermsComponent },
+  { path: 'privacy', component: PrivacyPolicyComponent },
+  { path: 'company', component: CompanyComponent },
+  { path: 'press-kit', component: PressKitComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'newsletter-success', component: NewsletterSuccessPageComponent },
   { path: '**', component: PageNotFoundComponent }
 ];

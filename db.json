@@ -113,6 +113,12 @@
       ]
     }
   ],
+  "newsletters": [
+    {
+      "id": "cf01",
+      "email": "test@test.pl"
+    }
+  ],
   "users": [
     {
       "id": "2949",
@@ -337,6 +343,179 @@
         "conditionType": "none",
         "parkingType": "none",
         "energeticCert": false
+      }
+    },
+    {
+      "id": "5aed",
+      "transactionDetails": {
+        "transactionType": "rent"
+      },
+      "propertyDetails": {
+        "propertyType": "house",
+        "title": "Eiusmod velit maxime",
+        "description": "Nihil laboris assume",
+        "locality": "Natus dolorem quia i",
+        "street": "Repudiandae sapiente",
+        "fullName": "Eu autem eos nostrud",
+        "phone": "Quis dolore voluptas",
+        "images": ""
+      },
+      "listingDetails": {
+        "marketType": "primary",
+        "adSignature": 17,
+        "exclusiveOffer": false,
+        "noAgentProvision": false,
+        "area": 58,
+        "price": "",
+        "deposit": 94,
+        "currency": "EUR",
+        "rooms": 42,
+        "floor": 43,
+        "totalFloors": 97,
+        "elevator": false,
+        "buildingType": "none",
+        "yearBuilt": 16,
+        "conditionType": "none",
+        "parkingType": "none",
+        "energeticCert": false
+      }
+    },
+    {
+      "id": "768d",
+      "userId": "ed5a",
+      "transactionDetails": {
+        "transactionType": "rent"
+      },
+      "propertyDetails": {
+        "propertyType": "house",
+        "title": "Ratione quae aliqua",
+        "description": "Consequat Obcaecati",
+        "locality": "Aut possimus sit in",
+        "street": "Nihil quis veniam n",
+        "fullName": "Aliquam ipsa quia s",
+        "phone": "Iure debitis dolores",
+        "images": ""
+      },
+      "listingDetails": {
+        "marketType": "primary",
+        "adSignature": 71,
+        "exclusiveOffer": false,
+        "noAgentProvision": false,
+        "area": 50,
+        "currency": "EUR",
+        "rooms": 91,
+        "floor": 33,
+        "totalFloors": 31,
+        "elevator": false,
+        "buildingType": "none",
+        "yearBuilt": 5,
+        "conditionType": "none",
+        "parkingType": "none",
+        "energeticCert": true,
+        "deposit": 71
+      }
+    },
+    {
+      "id": "efb3",
+      "transactionDetails": {
+        "transactionType": "sell"
+      },
+      "propertyDetails": {
+        "propertyType": "house",
+        "title": "Vel rerum maiores la",
+        "description": "Qui voluptatem sed ",
+        "locality": "Amet numquam sit et",
+        "street": "Dolor in nemo ullamc",
+        "fullName": "Quas harum facere ac",
+        "phone": "Possimus enim id et",
+        "images": ""
+      },
+      "listingDetails": {
+        "marketType": "primary",
+        "adSignature": 55,
+        "exclusiveOffer": false,
+        "noAgentProvision": false,
+        "area": 11,
+        "currency": "EUR",
+        "rooms": 77,
+        "floor": 64,
+        "totalFloors": 24,
+        "elevator": false,
+        "buildingType": "block",
+        "yearBuilt": 35,
+        "conditionType": "good",
+        "parkingType": "onStreet",
+        "energeticCert": false,
+        "price": 49
+      }
+    },
+    {
+      "id": "6e11",
+      "transactionDetails": {
+        "transactionType": "sell"
+      },
+      "propertyDetails": {
+        "propertyType": "house",
+        "title": "Aute nemo vel sit v",
+        "description": "Facere sunt dolor co",
+        "locality": "Suscipit ex iste cul",
+        "street": "Eius mollitia repreh",
+        "fullName": "Laboris earum ea dol",
+        "phone": "Maiores enim ipsum e",
+        "images": ""
+      },
+      "listingDetails": {
+        "marketType": "primary",
+        "adSignature": "-",
+        "exclusiveOffer": false,
+        "noAgentProvision": false,
+        "area": 34,
+        "currency": "EUR",
+        "rooms": 2,
+        "floor": "",
+        "totalFloors": "",
+        "elevator": false,
+        "buildingType": "none",
+        "yearBuilt": "",
+        "conditionType": "none",
+        "parkingType": "none",
+        "energeticCert": false,
+        "price": 0
+      }
+    },
+    {
+      "id": "22f3",
+      "transactionDetails": {
+        "transactionType": "rent"
+      },
+      "propertyDetails": {
+        "propertyType": "house",
+        "title": "Voluptatem at ut vo",
+        "description": "Omnis voluptatem Al",
+        "locality": "Tempore sapiente de",
+        "street": "Quia id unde ut qui",
+        "fullName": "Occaecat exercitatio",
+        "phone": "Distinctio Sit ape",
+        "images": ""
+      },
+      "listingDetails": {
+        "marketType": "secondary",
+        "adSignature": 72,
+        "exclusiveOffer": false,
+        "noAgentProvision": false,
+        "area": 55,
+        "currency": "EUR",
+        "rooms": 9,
+        "floor": 5,
+        "totalFloors": 36,
+        "elevator": false,
+        "buildingType": "none",
+        "yearBuilt": 30,
+        "conditionType": "none",
+        "parkingType": "none",
+        "energeticCert": true,
+        "deposit": 222,
+        "rent": 233
       }
     }
   ]

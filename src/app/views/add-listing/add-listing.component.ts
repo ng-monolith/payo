@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatStep, MatStepper, MatStepperModule } from '@angular/material/stepper';
 import { MatRadioButton, MatRadioGroup } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
@@ -85,23 +85,45 @@ export class AddListingComponent implements OnInit {
     });
     this.thirdFormGroup = this._formBuilder.group({
       marketType: ['', Validators.required],
-      adSignature: [''],
+      adSignature: ['-'],
       exclusiveOffer: [false],
       noAgentProvision: [false],
       area: ['', Validators.required],
-      price: ['', Validators.required],
       currency: ['', Validators.required],
       rooms: [''],
       floor: [''],
       totalFloors: [''],
       elevator: [false],
-      buildingType: ['none'],
+      buildingType: ['none', Validators.required],
       yearBuilt: [''],
-      conditionType: ['none'],
+      conditionType: ['none', Validators.required],
       parkingType: ['none'],
       energeticCert: [false],
     });
     this.getCurrentUser();
+    this.setupTransactionTypeListener();
+  }
+
+  private updatePriceOrDepositField(type: string) {
+    if (type === 'sell') {
+      if (this.thirdFormGroup.contains('deposit')) {
+        this.thirdFormGroup.removeControl('deposit');
+        this.thirdFormGroup.removeControl('rent');
+      }
+      this.thirdFormGroup.addControl('price', new FormControl(0, Validators.required));
+    } else if (type === 'rent') {
+      if (this.thirdFormGroup.contains('price')) {
+        this.thirdFormGroup.removeControl('price');
+      }
+      this.thirdFormGroup.addControl('deposit', new FormControl(0, Validators.required));
+      this.thirdFormGroup.addControl('rent', new FormControl(0, Validators.required));
+    }
+  }
+
+  private setupTransactionTypeListener() {
+    this.firstFormGroup.get('transactionType')!.valueChanges.subscribe(type => {
+      this.updatePriceOrDepositField(type);
+    });
   }
 
   private getCurrentUser(): void {

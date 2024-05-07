@@ -3,14 +3,34 @@
     <span>{{ details.propertyDetails.title }}</span>
   </mat-toolbar>
 
-  <img [src]="details.propertyDetails.images ? details.propertyDetails.images[0] : './assets/images/image-placeholder.jpg'"
-       alt="{{ details.propertyDetails.title }}"
-       class="w-full h-64 object-cover mb-4 rounded">
+  <ngx-slick-carousel class="carousel" [config]="slideConfig" #slickModal="slick-carousel">
+    <div ngxSlickItem *ngFor="let img of details.propertyDetails.images || slides">
+      <img src="{{ img }}" alt="Image" style="width: 100%; height: auto;">
+    </div>
+  </ngx-slick-carousel>
 
   <mat-card>
     <mat-card-header>
-      <mat-card-title>{{ details.propertyDetails.locality }}, {{ details.listingDetails.area }} m²</mat-card-title>
-      <mat-card-subtitle>{{ details.listingDetails.rooms }} pokoje, Piętro: {{ details.listingDetails.floor }}</mat-card-subtitle>
+      <div class="wrapper-header">
+        <mat-card-title>{{ details.propertyDetails.locality }}, {{ details.listingDetails.area }} m²</mat-card-title>
+        <mat-card-subtitle>{{ details.listingDetails.rooms }} pokoje, Piętro: {{ details.listingDetails.floor }}</mat-card-subtitle>
+      </div>
+      <div class="arrow-box">
+        <div
+          (click)="changeSlide('prev')"
+          (keydown)="changeSlideWithKeys($event)"
+          class="arrow-left"
+          tabindex="0"
+          type="button"
+        ></div>
+        <div
+          (click)="changeSlide('next')"
+          (keydown)="changeSlideWithKeys($event)"
+          class="arrow-right"
+          tabindex="0"
+          type="button"
+        ></div>
+      </div>
     </mat-card-header>
     <mat-card-content>
       <p class="text-lg">{{ details.listingDetails.price | currency:details.listingDetails.currency }}</p>

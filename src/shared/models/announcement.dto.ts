@@ -1,5 +1,5 @@
 export interface TransactionDetails {
-  transactionType: 'blog' | 'rent';
+  transactionType: 'sell' | 'rent';
 }
 
 export interface PropertyDetails {
@@ -23,6 +23,8 @@ export interface ListingDetails {
   rooms?: number;
   floor?: number;
   totalFloors?: number;
+  deposit?: number;
+  rent?: number;
   elevator: boolean;
   buildingType:  'none' | 'block' | 'multifamilyHouse' | 'detachedHouse' | 'tenement' | 'apartmentBuilding' | 'loft' | 'residence';
   yearBuilt?: number;
