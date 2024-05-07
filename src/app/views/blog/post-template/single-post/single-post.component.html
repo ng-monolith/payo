@@ -5,11 +5,16 @@
       <mat-card-subtitle class="text-gray-500">Autor: {{ postData.author }}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content *ngIf="postData.content">
-      <p class="mb-4">{{ postData.description }}</p>
+      <p class="description">{{ postData.description }}</p>
       <div *ngFor="let item of postData.content" class="mb-4">
         <h3>{{ item.title }}</h3>
         <p>{{ item.description }}</p>
       </div>
     </mat-card-content>
+    <mat-card-actions class="justify-start">
+      <button class="back-button" mat-stroked-button color="primary" routerLink="/blog">
+        <mat-icon>arrow_back</mat-icon> Powrót do Bloga
+      </button>
+    </mat-card-actions>
   </mat-card>
 </div>

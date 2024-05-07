@@ -9,6 +9,10 @@
   mat-card-title {
     @include title-v3;
   }
+  .description {
+    @include body-v2;
+    margin-bottom: 30px;
+  }
 }
 
 .card {
@@ -16,11 +20,12 @@
   border-radius: 0.5rem;
 }
 mat-card-header {
-  padding-bottom: 50px;
+  padding-bottom: 10px;
 }
-
-.mat-card-title {
-  margin-top: -8px;
+.back-button {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
 }
 
 mat-card-content{

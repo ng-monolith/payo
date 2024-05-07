@@ -1,8 +1,10 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { NgForOf, NgIf } from '@angular/common';
 import { MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardModule } from '@angular/material/card';
 import { Post } from '../../../../../shared/models/post';
+import { MatIcon } from '@angular/material/icon';
+import { MatButton } from '@angular/material/button';
 
 @Component({
   selector: 'app-single-post',
@@ -15,6 +17,9 @@ import { Post } from '../../../../../shared/models/post';
     MatCardActions,
     MatCardModule,
     NgForOf,
+    MatIcon,
+    RouterLink,
+    MatButton,
   ],
   templateUrl: './single-post.component.html',
   styleUrls: ['./single-post.component.scss']
