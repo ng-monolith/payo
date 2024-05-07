@@ -194,7 +194,7 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot)</code>
+<code>resolve(route: ActivatedRouteSnapshot)</code>
                 </td>
             </tr>
 
@@ -234,18 +234,6 @@
 
 
                                         </tr>
-                                        <tr>
-                                                <td>state</td>
-                                            <td>
-                                                        <code>RouterStateSnapshot</code>
-                                            </td>
-
-                                            <td>
-                                                    No
-                                            </td>
-
-
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -277,7 +265,7 @@ import { AnnouncementServiceService } from &#x27;../services/announcement-servic
 export class DetailsResolverService implements Resolve&lt;any&gt; {
   private announcementService &#x3D; inject(AnnouncementServiceService);
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable&lt;any&gt; {
+  resolve(route: ActivatedRouteSnapshot): Observable&lt;any&gt; {
     const id &#x3D; route.paramMap.get(&#x27;id&#x27;);
 
     if (id &#x3D;&#x3D;&#x3D; null) {

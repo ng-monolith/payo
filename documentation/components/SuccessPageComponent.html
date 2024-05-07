@@ -96,7 +96,7 @@
   <li class="breadcrumb-item">Components</li>
   <li class="breadcrumb-item"
   >
-  MyAccountComponent</li>
+  SuccessPageComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -123,7 +123,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/views/my-account/my-account.component.ts</code>
+    <code>src/app/views/success-page/success-page.component.ts</code>
 </p>
 
 
@@ -149,7 +149,7 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-my-account</code></td>
+                <td class="col-md-9"><code>app-success-page</code></td>
             </tr>
 
             <tr>
@@ -160,8 +160,13 @@
             <tr>
                 <td class="col-md-3">imports</td>
                 <td class="col-md-9">
+                            <code>MatCard</code>
+                            <code>MatCardTitle</code>
+                            <code>MatCardContent</code>
+                            <code>MatCardActions</code>
                                 <code><a href="../components/BannerComponent.html" target="_self" >BannerComponent</a></code>
                                 <code><a href="../components/SearchComponent.html" target="_self" >SearchComponent</a></code>
+                            <code>MatCardHeader</code>
                 </td>
             </tr>
 
@@ -170,14 +175,14 @@
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./my-account.component.html</code></td>
+                <td class="col-md-9"><code>./success-page.component.html</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">styleUrl</td>
-                <td class="col-md-9"><code>./my-account.component.scss</code></td>
+                <td class="col-md-9"><code>./success-page.component.scss</code></td>
             </tr>
 
 
@@ -201,20 +206,26 @@
 
     <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardTitle } from &#x27;@angular/material/card&#x27;;
 import { BannerComponent } from &#x27;../../../shared/components/banner/banner.component&#x27;;
 import { SearchComponent } from &#x27;../../../shared/components/search/search.component&#x27;;
 
 @Component({
-  selector: &#x27;app-my-account&#x27;,
+  selector: &#x27;app-success-page&#x27;,
   standalone: true,
   imports: [
+    MatCard,
+    MatCardTitle,
+    MatCardContent,
+    MatCardActions,
     BannerComponent,
     SearchComponent,
+    MatCardHeader,
   ],
-  templateUrl: &#x27;./my-account.component.html&#x27;,
-  styleUrl: &#x27;./my-account.component.scss&#x27;
+  templateUrl: &#x27;./success-page.component.html&#x27;,
+  styleUrl: &#x27;./success-page.component.scss&#x27;
 })
-export class MyAccountComponent {
+export class SuccessPageComponent {
 
 }
 </code></pre>
@@ -224,6 +235,26 @@ export class MyAccountComponent {
         <pre class="line-numbers"><code class="language-html">&lt;app-banner&gt;
   &lt;app-search/&gt;
 &lt;/app-banner&gt;
+
+&lt;div class&#x3D;&quot;max-w-md mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow my-10&quot;&gt;
+  &lt;img src&#x3D;&quot;assets/images/logo-full.webp&quot; alt&#x3D;&quot;Payo Logo&quot; class&#x3D;&quot;h-36 mb-3 mx-auto&quot;&gt;
+  &lt;h2 class&#x3D;&quot;mb-2 text-2xl font-semibold tracking-tight text-gray-900&quot;&gt;Sukces!&lt;/h2&gt;
+  &lt;p class&#x3D;&quot;font-normal text-gray-500 mb-4&quot;&gt;Twoje ogłoszenie zostało pomyślnie dodane. Możesz teraz dodać kolejne ogłoszenie lub wrócić do strony głównej.&lt;/p&gt;
+  &lt;div class&#x3D;&quot;btn-wrapper&quot;&gt;
+    &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 mr-2&quot;&gt;
+      Powrót do strony głównej
+      &lt;svg class&#x3D;&quot;w-6 h-6 ml-1&quot; fill&#x3D;&quot;none&quot; stroke&#x3D;&quot;currentColor&quot; viewBox&#x3D;&quot;0 0 24 24&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot;&gt;
+        &lt;path stroke-linecap&#x3D;&quot;round&quot; stroke-linejoin&#x3D;&quot;round&quot; stroke-width&#x3D;&quot;2&quot; d&#x3D;&quot;M15 19l-7-7 7-7&quot;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/a&gt;
+    &lt;a href&#x3D;&quot;/add-listing&quot; class&#x3D;&quot;inline-flex items-center px-4 py-2 text-sm font-medium text-center text-blue-700 bg-transparent border border-blue-700 rounded-lg hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300&quot;&gt;
+      Dodaj kolejne ogłoszenie
+      &lt;svg class&#x3D;&quot;w-6 h-6 ml-1&quot; fill&#x3D;&quot;none&quot; stroke&#x3D;&quot;currentColor&quot; viewBox&#x3D;&quot;0 0 24 24&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot;&gt;
+        &lt;path stroke-linecap&#x3D;&quot;round&quot; stroke-linejoin&#x3D;&quot;round&quot; stroke-width&#x3D;&quot;2&quot; d&#x3D;&quot;M12 9v6m3-3H9&quot;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
     </div>
 
@@ -253,10 +284,10 @@ export class MyAccountComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-banner>  <app-search/></app-banner></div>'
+        var COMPONENT_TEMPLATE = '<div><app-banner>  <app-search/></app-banner><div class="max-w-md mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow my-10">  <img src="assets/images/logo-full.webp" alt="Payo Logo" class="h-36 mb-3 mx-auto">  <h2 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900">Sukces!</h2>  <p class="font-normal text-gray-500 mb-4">Twoje ogłoszenie zostało pomyślnie dodane. Możesz teraz dodać kolejne ogłoszenie lub wrócić do strony głównej.</p>  <div class="btn-wrapper">    <a href="/" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 mr-2">      Powrót do strony głównej      <svg class="w-6 h-6 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>      </svg>    </a>    <a href="/add-listing" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-blue-700 bg-transparent border border-blue-700 rounded-lg hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300">      Dodaj kolejne ogłoszenie      <svg class="w-6 h-6 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v6m3-3H9"></path>      </svg>    </a>  </div></div></div>'
     var COMPONENTS = [{'name': 'AddListingComponent', 'selector': 'app-add-listing'},{'name': 'AnnouncementsComponent', 'selector': 'app-announcements'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BannerComponent', 'selector': 'app-banner'},{'name': 'BlogComponent', 'selector': 'app-blog'},{'name': 'BuyComponent', 'selector': 'app-buy'},{'name': 'DetailsComponent', 'selector': 'app-details'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotComponent', 'selector': 'app-forgot'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'ListingComponent', 'selector': 'app-listing'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MyAccountComponent', 'selector': 'app-my-account'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'RentComponent', 'selector': 'app-rent'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SinglePostComponent', 'selector': 'app-single-post'},{'name': 'SuccessPageComponent', 'selector': 'app-success-page'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'MyAccountComponent'};
+    var ACTUAL_COMPONENT = {'name': 'SuccessPageComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -302,7 +333,7 @@ export class MyAccountComponent {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'MyAccountComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'SuccessPageComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

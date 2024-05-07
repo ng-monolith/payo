@@ -10,7 +10,7 @@ import { AnnouncementServiceService } from '../services/announcement-service.ser
 export class DetailsResolverService implements Resolve<any> {
   private announcementService = inject(AnnouncementServiceService);
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
+  resolve(route: ActivatedRouteSnapshot): Observable<any> {
     const id = route.paramMap.get('id');
 
     if (id === null) {

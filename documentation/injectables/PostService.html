@@ -86,7 +86,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content class">
+               <div class="content injectable">
                    <div class="content-data">
 
 
@@ -96,13 +96,9 @@
 
 
 
-
-
-
-
 <ol class="breadcrumb">
-  <li class="breadcrumb-item">Classes</li>
-  <li class="breadcrumb-item" >ApiUrls</li>
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >PostService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -126,9 +122,8 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/shared/configs/api-urls.config.ts</code>
+            <code>src/shared/services/posts.service.ts</code>
         </p>
-
 
 
 
@@ -147,13 +142,30 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#announcements" >announcements</a>
+                                    <span class="modifier">Private</span>
+                                <a href="#apiUrl" >apiUrl</a>
                             </li>
                             <li>
-                                <a href="#posts" >posts</a>
+                                    <span class="modifier">Private</span>
+                                <a href="#http" >http</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getPostById" >getPostById</a>
                             </li>
                             <li>
-                                <a href="#users" >users</a>
+                                <a href="#getPosts" >getPosts</a>
                             </li>
                         </ul>
                     </td>
@@ -163,12 +175,121 @@
 
 
 
-
         </tbody>
     </table>
 </section>
 
 
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPostById"></a>
+                    <span class="name">
+                        <span ><b>getPostById</b></span>
+                        <a href="#getPostById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPostById(postId: string | null)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="19"
+                                    class="link-to-prism">src/shared/services/posts.service.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>postId</td>
+                                            <td>
+                                                        <code>string | null</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../interfaces/Post.html" target="_self" >Observable&lt;Post&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPosts"></a>
+                    <span class="name">
+                        <span ><b>getPosts</b></span>
+                        <a href="#getPosts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPosts()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="15"
+                                    class="link-to-prism">src/shared/services/posts.service.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../interfaces/Post.html" target="_self" >Observable&lt;Post[]&gt;</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
             <section data-compodoc="block-properties">
     
     <h3 id="inputs">
@@ -178,21 +299,22 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="announcements"></a>
+                    <a name="apiUrl"></a>
                     <span class="name">
-                        <span ><b>announcements</b></span>
-                        <a href="#announcements"><span class="icon ion-ios-link"></span></a>
+                            <span class="modifier">Private</span>
+                        <span ><b>apiUrl</b></span>
+                        <a href="#apiUrl"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>&#x60;${apiUrl}/announcements&#x60;</code>
+                        <i>Default value : </i><code>ApiUrlsConfig.posts</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/shared/configs/api-urls.config.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/shared/services/posts.service.ts:12</a></div>
                         </td>
                     </tr>
 
@@ -203,46 +325,22 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="posts"></a>
+                    <a name="http"></a>
                     <span class="name">
-                        <span ><b>posts</b></span>
-                        <a href="#posts"><span class="icon ion-ios-link"></span></a>
+                            <span class="modifier">Private</span>
+                        <span ><b>http</b></span>
+                        <a href="#http"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>&#x60;${apiUrl}/posts&#x60;</code>
+                        <i>Default value : </i><code>inject(HttpClient)</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/shared/configs/api-urls.config.ts:6</a></div>
-                        </td>
-                    </tr>
-
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="users"></a>
-                    <span class="name">
-                        <span ><b>users</b></span>
-                        <a href="#users"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>&#x60;${apiUrl}/users&#x60;</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/shared/configs/api-urls.config.ts:7</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/shared/services/posts.service.ts:13</a></div>
                         </td>
                     </tr>
 
@@ -251,30 +349,43 @@
     </table>
 </section>
 
-
-
-
-
-
-
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { environment } from &#x27;../../environment/environment&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable, inject } from &#x27;@angular/core&#x27;;
+import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import { Observable, of } from &#x27;rxjs&#x27;;
+import ApiUrlsConfig from &#x27;../configs/api-urls.config&#x27;;
+import { Post } from &#x27;../models/post&#x27;;
 
-const { apiUrl } &#x3D; environment;
+@Injectable({
+  providedIn: &#x27;root&#x27;
+})
+export class PostService {
+  private apiUrl &#x3D; ApiUrlsConfig.posts;
+  private http &#x3D; inject(HttpClient);
 
-class ApiUrls {
-  posts &#x3D; &#x60;${apiUrl}/posts&#x60;;
-  users &#x3D; &#x60;${apiUrl}/users&#x60;;
-  announcements &#x3D; &#x60;${apiUrl}/announcements&#x60;;
+  getPosts(): Observable&lt;Post[]&gt; {
+    return this.http.get&lt;Post[]&gt;(&#x60;${this.apiUrl}&#x60;);
+  }
+
+  getPostById(postId: string | null): Observable&lt;Post&gt; {
+    if (postId !&#x3D;&#x3D; null) {
+      return this.http.get&lt;Post&gt;(&#x60;${this.apiUrl}/${postId}&#x60;);
+    } else {
+      return of({} as Post);
+    }
+  }
 }
-
-export default new ApiUrls();
 </code></pre>
     </div>
+
 </div>
+
+
+
+
 
 
 
@@ -309,8 +420,8 @@ export default new ApiUrls();
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
-            var COMPODOC_CURRENT_PAGE_URL = 'ApiUrls.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'PostService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

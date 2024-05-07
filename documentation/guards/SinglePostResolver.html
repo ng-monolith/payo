@@ -86,7 +86,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content class">
+               <div class="content guard">
                    <div class="content-data">
 
 
@@ -98,11 +98,9 @@
 
 
 
-
-
 <ol class="breadcrumb">
-  <li class="breadcrumb-item">Classes</li>
-  <li class="breadcrumb-item" >ApiUrls</li>
+    <li class="breadcrumb-item">Guards</li>
+    <li class="breadcrumb-item" >SinglePostResolver</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -121,20 +119,20 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info">
-        <p class="comment">
+        <div class="tab-pane fade active in" id="info">
+            <p class="comment">
             <h3>File</h3>
-        </p>
-        <p class="comment">
-            <code>src/shared/configs/api-urls.config.ts</code>
-        </p>
+            </p>
+            <p class="comment">
+                <code>src/shared/Resolvers/single-post.resolver.ts</code>
+            </p>
 
 
 
 
 
 
-            <section data-compodoc="block-index">
+                <section data-compodoc="block-index">
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
@@ -147,13 +145,23 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#announcements" >announcements</a>
+                                    <span class="modifier">Private</span>
+                                <a href="#postService" >postService</a>
                             </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
                             <li>
-                                <a href="#posts" >posts</a>
-                            </li>
-                            <li>
-                                <a href="#users" >users</a>
+                                <a href="#resolve" >resolve</a>
                             </li>
                         </ul>
                     </td>
@@ -163,118 +171,122 @@
 
 
 
-
         </tbody>
     </table>
 </section>
 
 
-            <section data-compodoc="block-properties">
+                <section data-compodoc="block-methods">
     
-    <h3 id="inputs">
-        Properties
+    <h3 id="methods">
+        Methods
     </h3>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="announcements"></a>
+                    <a name="resolve"></a>
                     <span class="name">
-                        <span ><b>announcements</b></span>
-                        <a href="#announcements"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>resolve</b></span>
+                        <a href="#resolve"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>&#x60;${apiUrl}/announcements&#x60;</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/shared/configs/api-urls.config.ts:8</a></div>
-                        </td>
-                    </tr>
-
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="posts"></a>
-                    <span class="name">
-                        <span ><b>posts</b></span>
-                        <a href="#posts"><span class="icon ion-ios-link"></span></a>
-                    </span>
+<code>resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot)</code>
                 </td>
             </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>&#x60;${apiUrl}/posts&#x60;</code>
-                    </td>
-                </tr>
+
+
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/shared/configs/api-urls.config.ts:6</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="14"
+                                    class="link-to-prism">src/shared/Resolvers/single-post.resolver.ts:14</a></div>
                         </td>
                     </tr>
 
 
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="users"></a>
-                    <span class="name">
-                        <span ><b>users</b></span>
-                        <a href="#users"><span class="icon ion-ios-link"></span></a>
-                    </span>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>route</td>
+                                            <td>
+                                                        <code>ActivatedRouteSnapshot</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>state</td>
+                                            <td>
+                                                        <code>RouterStateSnapshot</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../interfaces/Post.html" target="_self" >Observable&lt;Post&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
                 </td>
             </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>&#x60;${apiUrl}/users&#x60;</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/shared/configs/api-urls.config.ts:7</a></div>
-                        </td>
-                    </tr>
-
-
         </tbody>
     </table>
 </section>
+        </div>
 
 
+        <div class="tab-pane fade  tab-source-code" id="source">
+            <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { inject, Injectable } from &#x27;@angular/core&#x27;;
+import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from &#x27;@angular/router&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
+import { PostService } from &#x27;../services/posts.service&#x27;;
+import { Post } from &#x27;../models/post&#x27;;
 
+@Injectable({
+  providedIn: &#x27;root&#x27;
+})
+export class SinglePostResolver implements Resolve&lt;Post&gt; {
+  private postService &#x3D; inject(PostService);
 
-
-
-
-    </div>
-
-
-    <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { environment } from &#x27;../../environment/environment&#x27;;
-
-const { apiUrl } &#x3D; environment;
-
-class ApiUrls {
-  posts &#x3D; &#x60;${apiUrl}/posts&#x60;;
-  users &#x3D; &#x60;${apiUrl}/users&#x60;;
-  announcements &#x3D; &#x60;${apiUrl}/announcements&#x60;;
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable&lt;Post&gt; {
+    const postId &#x3D; route.paramMap.get(&#x27;id&#x27;);
+    return this.postService.getPostById(postId);
+  }
 }
-
-export default new ApiUrls();
 </code></pre>
-    </div>
+        </div>
 </div>
+
+
 
 
 
@@ -309,8 +321,8 @@ export default new ApiUrls();
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
-            var COMPODOC_CURRENT_PAGE_URL = 'ApiUrls.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'guard';
+            var COMPODOC_CURRENT_PAGE_URL = 'SinglePostResolver.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

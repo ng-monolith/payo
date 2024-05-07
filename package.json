@@ -8,6 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "compodoc": "./node_modules/.bin/compodoc -p tsconfig.json -w -s",
+    "doc": "npx compodoc -p tsconfig.doc.json -w -s",
     "lint": "ng lint",
     "backend": "json-server --watch db.json --port 3000"
   },

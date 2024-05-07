@@ -66,6 +66,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="components/BannerComponent.html" data-type="entity-link" >BannerComponent</a>
                             </li>
                             <li class="link">
+                                <a href="components/BlogComponent.html" data-type="entity-link" >BlogComponent</a>
+                            </li>
+                            <li class="link">
                                 <a href="components/BuyComponent.html" data-type="entity-link" >BuyComponent</a>
                             </li>
                             <li class="link">
@@ -108,10 +111,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="components/SearchComponent.html" data-type="entity-link" >SearchComponent</a>
                             </li>
                             <li class="link">
-                                <a href="components/SellComponent.html" data-type="entity-link" >SellComponent</a>
+                                <a href="components/SettingsComponent.html" data-type="entity-link" >SettingsComponent</a>
                             </li>
                             <li class="link">
-                                <a href="components/SettingsComponent.html" data-type="entity-link" >SettingsComponent</a>
+                                <a href="components/SinglePostComponent.html" data-type="entity-link" >SinglePostComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/SuccessPageComponent.html" data-type="entity-link" >SuccessPageComponent</a>
                             </li>
                         </ul>
                     </li>
@@ -140,7 +146,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     <a href="injectables/AnnouncementServiceService.html" data-type="entity-link" >AnnouncementServiceService</a>
                                 </li>
                                 <li class="link">
+                                    <a href="injectables/PostService.html" data-type="entity-link" >PostService</a>
+                                </li>
+                                <li class="link">
                                     <a href="injectables/RouteManagerService.html" data-type="entity-link" >RouteManagerService</a>
+                                </li>
+                                <li class="link">
+                                    <a href="injectables/UserService.html" data-type="entity-link" >UserService</a>
                                 </li>
                             </ul>
                         </li>
@@ -155,6 +167,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             <li class="link">
                                 <a href="guards/DetailsResolverService.html" data-type="entity-link" >DetailsResolverService</a>
                             </li>
+                            <li class="link">
+                                <a href="guards/SinglePostResolver.html" data-type="entity-link" >SinglePostResolver</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="chapter">
@@ -165,6 +180,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             <span class="icon ion-ios-arrow-down"></span>
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
+                            <li class="link">
+                                <a href="interfaces/ContentDetail.html" data-type="entity-link" >ContentDetail</a>
+                            </li>
                             <li class="link">
                                 <a href="interfaces/HumanReadableValues.html" data-type="entity-link" >HumanReadableValues</a>
                             </li>
@@ -178,6 +196,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/ListingDetails.html" data-type="entity-link" >ListingDetails</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/Post.html" data-type="entity-link" >Post</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/PropertyDetails.html" data-type="entity-link" >PropertyDetails</a>
                             </li>
                             <li class="link">
@@ -185,6 +206,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/Translations.html" data-type="entity-link" >Translations</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/User.html" data-type="entity-link" >User</a>
                             </li>
                         </ul>
                     </li>
