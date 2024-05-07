@@ -6,10 +6,8 @@ import { Observable, from } from 'rxjs';
   providedIn: 'root'
 })
 export class NewsletterService {
-  firestore = inject(Firestore);
-  newsletterCollection = collection(this.firestore, 'newsletters');
-
-  constructor() {}
+  private firestore = inject(Firestore);
+  private newsletterCollection = collection(this.firestore, 'newsletters');
 
   send(email: string): Observable<any> {
     return from(addDoc(this.newsletterCollection, { email }));

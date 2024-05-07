@@ -1,16 +1,26 @@
+import {
+  BuildingType,
+  ConditionType,
+  CurrencyType,
+  MarketType,
+  ParkingType,
+  PropertyType,
+  TransactionType,
+} from './types';
+
 export interface ListingConfig {
-  transactionType?: 'sell' | 'rent' | 'buy' | 'exchange' | 'other'
-  propertyType?: 'flat' | 'house' | 'other';
+  transactionType?: TransactionType;
+  propertyType?: PropertyType;
 }
 
 export interface Listing {
   id: string;
   userId: string;
   transactionDetails: {
-    transactionType: string;
+    transactionType: TransactionType;
   };
   propertyDetails: {
-    propertyType: string;
+    propertyType: MarketType;
     title: string;
     description: string;
     locality: string;
@@ -20,21 +30,23 @@ export interface Listing {
     images?: [string]
   };
   listingDetails: {
-    marketType: string;
+    marketType: MarketType;
     adSignature?: string;
     exclusiveOffer?: boolean;
     noAgentProvision?: boolean;
     area: number;
     price: number;
-    currency: string;
+    deposit?: number;
+    rent?: number;
+    currency: CurrencyType;
     rooms?: number;
     floor?: string;
     totalFloors?: number;
     elevator?: boolean;
-    buildingType?: string;
+    buildingType?: BuildingType;
     yearBuilt?: string;
-    conditionType?: string;
-    parkingType?: string;
+    conditionType?: ConditionType;
+    parkingType?: ParkingType;
     energeticCert?: boolean;
   };
 }
