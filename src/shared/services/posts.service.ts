@@ -1,31 +1,44 @@
-// src/app/services/posts.service.ts
 import { Injectable, inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
-import ApiUrlsConfig from '../configs/api-urls.config';
+import { from, Observable } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
+import { Firestore, collection, doc, getDoc, getDocs, QuerySnapshot, DocumentData, DocumentSnapshot } from '@angular/fire/firestore';
 import { Post } from '../models/post';
-import { collection, Firestore } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
-  firestore = inject(Firestore);
-  postsCollection = collection(this.firestore, 'posts');
-
-
-  private apiUrl = ApiUrlsConfig.posts;
-  private http = inject(HttpClient);
+  private firestore = inject(Firestore);
+  private postsCollection = collection(this.firestore, 'posts');
 
   getPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>(`${this.apiUrl}`);
+    return from(getDocs(this.postsCollection)).pipe(
+      map((snapshot: QuerySnapshot<DocumentData>) => snapshot.docs.map(doc => ({
+        ...doc.data() as Post,
+        id: doc.id
+      }))),
+      catchError(err => {
+        throw new Error('Error getting documents: ' + err);
+      })
+    );
   }
 
-  getPostById(postId: string | null): Observable<Post> {
-    if (postId !== null) {
-      return this.http.get<Post>(`${this.apiUrl}/${postId}`);
-    } else {
-      return of({} as Post);
-    }
+  getPostById(postId: string): Observable<Post> {
+    const postDocRef = doc(this.firestore, `posts/${postId}`);
+    return from(getDoc(postDocRef)).pipe(
+      map((docSnapshot: DocumentSnapshot<DocumentData>) => {
+        if (docSnapshot.exists()) {
+          return {
+            ...docSnapshot.data() as Post,
+            id: docSnapshot.id
+          };
+        } else {
+          throw new Error('Post not found!');
+        }
+      }),
+      catchError(err => {
+        throw new Error('Error getting document: ' + err);
+      })
+    );
   }
 }

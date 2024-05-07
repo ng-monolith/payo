@@ -17,7 +17,7 @@ import { Post } from '../../../../../shared/models/post';
     NgForOf,
   ],
   templateUrl: './single-post.component.html',
-  styleUrl: './single-post.component.scss'
+  styleUrls: ['./single-post.component.scss']
 })
 export class SinglePostComponent implements OnInit {
   post: Post | null = null;
