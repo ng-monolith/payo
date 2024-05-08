@@ -14,7 +14,7 @@ export interface ListingConfig {
 }
 
 export interface Listing {
-  id: string;
+  id?: string;
   userId: string;
   transactionDetails: {
     transactionType: TransactionType;

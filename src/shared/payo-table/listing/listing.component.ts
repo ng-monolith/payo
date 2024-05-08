@@ -33,6 +33,7 @@ export class ListingComponent implements OnInit {
       error: (error) => console.error('Failed to load listings:', error)
     });
   }
+
   getDetailsArray(details: any): Array<{ key: string, value: any }> {
     return Object.entries(details).map(([key, value]) => ({ key, value }));
   }

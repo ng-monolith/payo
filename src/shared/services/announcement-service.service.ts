@@ -1,30 +1,43 @@
 import { inject, Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { map, Observable, tap } from 'rxjs';
-import ApiUrlsConfig from '../configs/api-urls.config';
+import { Firestore, collection, doc, getDocs, getDoc, addDoc, CollectionReference } from '@angular/fire/firestore';
+import { Observable, from, map } from 'rxjs';
 import { Listing, ListingConfig } from '../models/listing';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AnnouncementServiceService {
-  private apiUrl = ApiUrlsConfig.announcements;
-
-  private http = inject(HttpClient);
+  private firestore = inject(Firestore);
+  private announcementsCollection: CollectionReference = collection(this.firestore, 'announcements');
 
   save(data: any): Observable<any> {
-    return this.http.post(this.apiUrl, data);
+    return from(addDoc(this.announcementsCollection, data));
   }
 
   getAllListings(config?: ListingConfig): Observable<Listing[]> {
-    return this.http.get<Listing[]>(this.apiUrl).pipe(
-      map(listings => listings.filter(listing =>
-        !config || (config.transactionType ? listing.transactionDetails.transactionType === config.transactionType : true)
-      ))
+    return from(getDocs(this.announcementsCollection)).pipe(
+      map(snapshot => {
+        let listings = snapshot.docs.map(doc => ({
+          id: doc.id,
+          ...(doc.data() as Listing)
+        }));
+        if (config) {
+          listings = listings.filter(listing =>
+            config.transactionType ? listing.transactionDetails.transactionType === config.transactionType : true
+          );
+        }
+        return listings;
+      })
     );
   }
 
-  get(id: string): Observable<any> {
-    return this.http.get(`${this.apiUrl}/${id}`);
+  get(id: string): Observable<Listing> {
+    const docRef = doc(this.firestore, `announcements/${id}`);
+    return from(getDoc(docRef)).pipe(
+      map(snapshot => ({
+        id: snapshot.id,
+        ...(snapshot.data() as Listing)
+      }))
+    );
   }
 }

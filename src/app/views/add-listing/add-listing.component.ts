@@ -7,8 +7,6 @@ import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
 import { MatOption, MatSelect } from '@angular/material/select';
 import { MatCheckbox } from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
-import { MatDatepicker, MatDatepickerInput, MatDatepickerToggle } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
 import { MatSlideToggle } from '@angular/material/slide-toggle';
 import {
   MatSlideToggleModule,
@@ -18,7 +16,6 @@ import { BannerComponent } from '../../../shared/components/banner/banner.compon
 import { NgIf } from '@angular/common';
 import { SearchComponent } from '../../../shared/components/search/search.component';
 import { AnnouncementServiceService } from '../../../shared/services/announcement-service.service';
-import { HttpClientModule } from '@angular/common/http';
 import { ListingDetails, PropertyDetails, TransactionDetails } from '../../../shared/models/announcement.dto';
 import { UserService } from '../../../shared/services/user.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -41,10 +38,6 @@ import { Router } from '@angular/router';
     MatCheckbox,
     MatFormFieldModule,
     MatInputModule,
-    MatDatepickerInput,
-    MatDatepickerToggle,
-    MatDatepicker,
-    MatNativeDateModule,
     MatSlideToggle,
     MatSlideToggleModule,
     FormsModule,
@@ -52,10 +45,9 @@ import { Router } from '@angular/router';
     BannerComponent,
     NgIf,
     SearchComponent,
-    HttpClientModule,
   ],
   templateUrl: './add-listing.component.html',
-  styleUrl: './add-listing.component.scss'
+  styleUrls: ['./add-listing.component.scss']
 })
 export class AddListingComponent implements OnInit {
   firstFormGroup!: FormGroup;
@@ -162,6 +154,7 @@ export class AddListingComponent implements OnInit {
       });
     }
   }
+
   private resetForms() {
     this.firstFormGroup.reset();
     this.secondFormGroup.reset();
