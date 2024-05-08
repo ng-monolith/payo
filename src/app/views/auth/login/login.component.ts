@@ -24,30 +24,27 @@ import { UserService } from '../../../../shared/services/user.service';
   ],
 })
 export class LoginComponent implements OnInit {
-
   private userService = inject(UserService);
   private router = inject(Router);
 
   loginForm = new FormGroup({
-    email: new FormControl('', {nonNullable: true, validators: [Validators.required, Validators.email]}),
-    password: new FormControl('', {nonNullable: true, validators: [Validators.required] }),
-    remember: new FormControl(false, {nonNullable: true})
+    email: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.email] }),
+    password: new FormControl('', { nonNullable: true, validators: [Validators.required] }),
+    remember: new FormControl(false, { nonNullable: true })
   });
+
+  errorMessage: string | null = null;
 
   ngOnInit(): void {
     this.initializeForm();
   }
 
   private initializeForm(): void {
-    const userData = localStorage.getItem('user');
-    if (userData) {
-      const user = JSON.parse(userData);
-      if (user.remember) {
-        this.loginForm.patchValue({
-          email: user.email,
-          password: user.password,
-        });
-      }
+    const remember = localStorage.getItem('remember');
+    if (remember) {
+      this.loginForm.patchValue({
+        remember: true
+      });
     }
   }
 
@@ -58,11 +55,13 @@ export class LoginComponent implements OnInit {
       const remember = this.loginForm.get('remember')!.value;
 
       this.userService.loginUser(email, password, remember).subscribe({
-        next: response => {
-          localStorage.setItem('user', JSON.stringify(response));
+        next: () => {
           this.router.navigate(['/']);
         },
-        error: error => console.error('Login error:', error)
+        error: error => {
+          console.error('Login error:', error);
+          this.errorMessage = 'Nieprawidłowe dane logowania.';
+        }
       });
     }
   }

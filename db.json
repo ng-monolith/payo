@@ -1,142 +1,4 @@
 {
-  "posts": [
-    {
-      "id": "1",
-      "title": "5 wskazówek dla sprzedających nieruchomości",
-      "description": "Oto pięć kluczowych wskazówek, które pomogą Ci sprzedać swoją nieruchomość szybko i skutecznie.",
-      "author": "Jan Kowalski",
-      "content": [
-        {
-          "title": "Rozpocznij od gruntownego przygotowania",
-          "description": "Zacznij od dokładnego przygotowania nieruchomości do sprzedaży, usuwając wszelkie usterki i poprawiając jej wygląd."
-        },
-        {
-          "title": "Ustal atrakcyjną cenę",
-          "description": "Dokładnie przeanalizuj rynek i ustal konkurencyjną, ale atrakcyjną cenę, która przyciągnie potencjalnych kupców."
-        },
-        {
-          "title": "Zainwestuj w marketing",
-          "description": "Wykorzystaj różne kanały marketingowe, takie jak portale nieruchomości, social media i reklamy, aby dotrzeć do jak największej liczby potencjalnych klientów."
-        },
-        {
-          "title": "Przygotuj się na negocjacje",
-          "description": "Bądź gotowy na negocjacje z potencjalnymi kupcami i miej jasno określone swoje minimalne warunki sprzedaży."
-        },
-        {
-          "title": "Skorzystaj z pomocy profesjonalistów",
-          "description": "W razie potrzeby skorzystaj z usług agenta nieruchomości lub prawnika, aby pomóc Ci w procesie sprzedaży."
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "title": "Jak przygotować nieruchomość do sprzedaży?",
-      "description": "W tym poście omówimy kroki, które warto podjąć, aby przygotować nieruchomość do udanej sprzedaży.",
-      "author": "Anna Nowak",
-      "content": [
-        {
-          "title": "Ocena stanu technicznego",
-          "description": "Zacznij od oceny stanu technicznego nieruchomości, w tym wszystkich instalacji i wykończenia."
-        },
-        {
-          "title": "Drobne naprawy",
-          "description": "Wykonaj niezbędne drobne naprawy, które mogą znacząco podnieść wartość nieruchomości."
-        },
-        {
-          "title": "Home staging",
-          "description": "Rozważ home staging, aby lepiej zaprezentować nieruchomość potencjalnym kupującym."
-        },
-        {
-          "title": "Zdjęcia nieruchomości",
-          "description": "Zainwestuj w profesjonalne zdjęcia, które efektywnie przedstawią nieruchomość w ogłoszeniach."
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "title": "Najnowsze trendy na rynku nieruchomości",
-      "description": "Sprawdź, jakie są najnowsze trendy na rynku nieruchomości i jak mogą one wpłynąć na Twoją sprzedaż.",
-      "author": "Piotr Wiśniewski",
-      "content": [
-        {
-          "title": "Digitalizacja procesów",
-          "description": "Zwiększone wykorzystanie technologii cyfrowych w procesie kupna-sprzedaży."
-        },
-        {
-          "title": "Zielone budownictwo",
-          "description": "Rosnące zainteresowanie nieruchomościami zrównoważonymi ekologicznie."
-        },
-        {
-          "title": "Mieszkania dla millenialsów",
-          "description": "Projekty nieruchomości dostosowane do potrzeb pokolenia Y."
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "title": "Znaczenie profesjonalnych zdjęć w ogłoszeniach o sprzedaży nieruchomości",
-      "description": "Dowiedz się, dlaczego profesjonalne zdjęcia są kluczowe dla skutecznych ogłoszeń o sprzedaży nieruchomości.",
-      "author": "Karolina Lewandowska",
-      "content": [
-        {
-          "title": "Wpływ na pierwsze wrażenie",
-          "description": "Jak jakość zdjęć wpływa na percepcję oferty przez potencjalnych kupujących."
-        },
-        {
-          "title": "Techniki fotograficzne",
-          "description": "Podstawowe techniki, które pomagają wyróżnić twoją nieruchomość."
-        },
-        {
-          "title": "Wirtualne spacery",
-          "description": "Zastosowanie wirtualnych spacerów jako uzupełnienie zdjęć w ofertach."
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "title": "Jak ustalić odpowiednią cenę swojej nieruchomości?",
-      "description": "W tym poście podpowiemy Ci, jak ustalić odpowiednią cenę swojej nieruchomości, aby przyciągnąć potencjalnych kupców.",
-      "author": "Michał Adamczyk",
-      "content": [
-        {
-          "title": "Analiza rynku",
-          "description": "Jak analiza rynku lokalnego może pomóc w ustaleniu ceny."
-        },
-        {
-          "title": "Porównanie cen",
-          "description": "Korzystanie z danych o cenach sprzedaży podobnych nieruchomości w okolicy."
-        },
-        {
-          "title": "Czynniki wpływające na cenę",
-          "description": "Jakie czynniki mogą podnieść lub obniżyć cenę nieruchomości."
-        }
-      ]
-    }
-  ],
-  "newsletters": [
-    {
-      "id": "cf01",
-      "email": "test@test.pl"
-    }
-  ],
-  "users": [
-    {
-      "id": "2949",
-      "fullName": "test",
-      "email": "test@wp.pl",
-      "password": "testtest",
-      "acceptTerms": true,
-      "role": "viewer"
-    },
-    {
-      "id": "ed5a",
-      "fullName": "Damian",
-      "email": "test@test.pl",
-      "password": "123",
-      "acceptTerms": true,
-      "role": "admin"
-    }
-  ],
   "announcements": [
     {
       "id": "0264",
@@ -516,6 +378,41 @@
         "energeticCert": true,
         "deposit": 222,
         "rent": 233
+      }
+    },
+    {
+      "id": "56d0",
+      "userId": "vC1hkjksuTzR3WUJNgpE",
+      "transactionDetails": {
+        "transactionType": "sell"
+      },
+      "propertyDetails": {
+        "propertyType": "house",
+        "title": "test 08.05",
+        "description": "Itaque a duis ex har",
+        "locality": "Voluptate iusto fugi",
+        "street": "Amet et maiores cor",
+        "fullName": "Dolore hic neque nul",
+        "phone": "Est voluptatibus dol",
+        "images": ""
+      },
+      "listingDetails": {
+        "marketType": "primary",
+        "adSignature": 5,
+        "exclusiveOffer": true,
+        "noAgentProvision": false,
+        "area": 73,
+        "currency": "EUR",
+        "rooms": 13,
+        "floor": 55,
+        "totalFloors": 95,
+        "elevator": true,
+        "buildingType": "none",
+        "yearBuilt": 48,
+        "conditionType": "highStandard",
+        "parkingType": "onStreet",
+        "energeticCert": true,
+        "price": 30
       }
     }
   ]

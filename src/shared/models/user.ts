@@ -4,6 +4,7 @@ export interface User {
   email: string;
   password: string;
   acceptTerms: boolean;
+  remember?: boolean;
   role: UserRole;
 }
 

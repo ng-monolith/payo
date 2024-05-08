@@ -13,6 +13,10 @@
           <input class="form-input" type="password" placeholder="••••••••" formControlName="password" required>
         </label>
         <div class="flex items-center justify-between">
+          <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox" formControlName="remember">
+            <span class="block ml-2 text-xs font-medium text-gray-700 cursor-pointer">Zapamiętaj mnie</span>
+          </label>
           <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Zaloguj się</button>
         </div>
       </form>
