@@ -5,7 +5,7 @@ import {
   fetchSignInMethodsForEmail, User as FirebaseUser, onAuthStateChanged
 } from '@angular/fire/auth';
 import { Observable, from, of, BehaviorSubject } from 'rxjs';
-import { map, switchMap, catchError, tap } from 'rxjs/operators';
+import { map, switchMap, catchError } from 'rxjs/operators';
 import { User } from '../models/user';
 
 @Injectable({

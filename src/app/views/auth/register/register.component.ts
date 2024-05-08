@@ -59,7 +59,7 @@ export class RegisterComponent {
           next: user => {
             console.log('User registered:', user);
             this.registerForm.reset();
-            this.router.navigate(['/login']);
+            this.router.navigate(['/']);
           },
           error: error => {
             console.error('Registration failed:', error);

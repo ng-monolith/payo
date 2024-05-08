@@ -414,6 +414,41 @@
         "energeticCert": true,
         "price": 30
       }
+    },
+    {
+      "id": "6a69",
+      "userId": "XHtXvjD0XabUcjKG9j8l5Zwgo1b2",
+      "transactionDetails": {
+        "transactionType": "sell"
+      },
+      "propertyDetails": {
+        "propertyType": "house",
+        "title": "glupi test",
+        "description": "Tempore odio dolore",
+        "locality": "Nulla id autem esse",
+        "street": "Modi voluptas velit ",
+        "fullName": "Iusto earum laboris ",
+        "phone": "Laboriosam explicab",
+        "images": ""
+      },
+      "listingDetails": {
+        "marketType": "primary",
+        "adSignature": 12,
+        "exclusiveOffer": true,
+        "noAgentProvision": false,
+        "area": 55,
+        "currency": "EUR",
+        "rooms": 12,
+        "floor": 6,
+        "totalFloors": 83,
+        "elevator": true,
+        "buildingType": "none",
+        "yearBuilt": 48,
+        "conditionType": "none",
+        "parkingType": "none",
+        "energeticCert": false,
+        "price": 91
+      }
     }
   ]
 }
