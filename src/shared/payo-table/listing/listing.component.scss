@@ -35,8 +35,13 @@
 
       }
       &__price {
-        @include title-v3;
-        @include title-v3;
+        @include title-v4;
+      }
+      &__title {
+        @include body-v2;
+      }
+      &__description {
+        @include body-v3;
       }
       &__features {
         column-count: 2;
