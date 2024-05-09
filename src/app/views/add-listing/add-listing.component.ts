@@ -15,7 +15,7 @@ import {
 import { BannerComponent } from '../../../shared/components/banner/banner.component';
 import { NgIf } from '@angular/common';
 import { SearchComponent } from '../../../shared/components/search/search.component';
-import { AnnouncementServiceService } from '../../../shared/services/announcement-service.service';
+import { AnnouncementService } from '../../../shared/services/announcement.service';
 import { ListingDetails, PropertyDetails, TransactionDetails } from '../../../shared/models/announcement.dto';
 import { UserService } from '../../../shared/services/user.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -57,7 +57,7 @@ export class AddListingComponent implements OnInit {
 
   private userService = inject(UserService);
   private _formBuilder = inject(FormBuilder);
-  private announcementService = inject(AnnouncementServiceService);
+  private announcementService = inject(AnnouncementService);
   private snackBar = inject(MatSnackBar);
   private router = inject(Router);
 

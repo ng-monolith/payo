@@ -1,1 +1,23 @@
-<p>announcements works!</p>
+<div class="list-container">
+  <h2>Twoje Ogłoszenia</h2>
+  <ng-container *ngIf="listings.length > 0; else noListings">
+    <div class="listing-item" *ngFor="let listing of listings">
+      <a class="listing-link" [routerLink]="['/details', listing.id]">
+        <img class="listing-image" [src]="listing.propertyDetails.images ? listing.propertyDetails.images[0] : './assets/images/image-placeholder.jpg'" alt="{{ listing.propertyDetails.title }}">
+        <div class="listing-content">
+          <h3 class="listing-title">{{ listing.propertyDetails.title }}</h3>
+          <p class="listing-description">{{ listing.propertyDetails.description }}</p>
+        </div>
+      </a>
+      <div class="listing-actions">
+        <mat-icon class="edit-icon" color="primary" (click)="editListing(listing.id!)">edit</mat-icon>
+        <mat-icon class="delete-icon" color="warn" (click)="confirmDeleteListing(listing.id!)">delete</mat-icon>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<ng-template #noListings>
+  <p>Brak ogłoszeń. Dodaj pierwsze ogłoszenie, klikając poniższy przycisk.</p>
+  <a mat-raised-button color="primary" routerLink="/add-listing">Dodaj ogłoszenie</a>
+</ng-template>

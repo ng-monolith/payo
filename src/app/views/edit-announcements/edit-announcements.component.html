@@ -1,0 +1,187 @@
+<app-banner>
+  <app-search/>
+</app-banner>
+<mat-horizontal-stepper class="stepper-container" [linear]="true" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Wybierz typ transakcji</ng-template>
+      <mat-radio-group aria-label="Wybierz typ transakcji" formControlName="transactionType">
+        <mat-radio-button value="sell">Sprzedam</mat-radio-button>
+        <mat-radio-button value="rent">Wynajmę</mat-radio-button>
+      </mat-radio-group>
+
+      <div class="buttons-wrapper">
+        <button mat-button matStepperNext>Następny krok</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Wybierz typ nieruchomości</ng-template>
+      <mat-radio-group aria-label="Wybierz typ nieruchomości" formControlName="propertyType">
+        <mat-radio-button value="flat">Mieszkanie</mat-radio-button>
+        <mat-radio-button value="house">Dom</mat-radio-button>
+      </mat-radio-group>
+
+      <div class="field-wrapper">
+        <mat-form-field>
+          <mat-label>Tytuł ogłoszenia</mat-label>
+          <input matInput formControlName="title" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Lokalizacja</mat-label>
+          <input matInput formControlName="locality" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Ulica</mat-label>
+          <input matInput formControlName="street" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Imię i Nazwisko</mat-label>
+          <input matInput formControlName="fullName" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Telefon</mat-label>
+          <input matInput formControlName="phone" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Opis</mat-label>
+          <textarea matInput formControlName="description" rows="3" required></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="buttons-wrapper">
+        <button mat-button matStepperPrevious>Poprzedni krok</button>
+        <button mat-button matStepperNext>Następny krok</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="thirdFormGroup">
+    <form class="form-wrapper" [formGroup]="thirdFormGroup" (ngSubmit)="onSubmit()">
+      <ng-template matStepLabel>Dane szczegółowe ogłoszenia</ng-template>
+
+      <mat-form-field>
+        <mat-label>Rynek</mat-label>
+        <mat-select formControlName="marketType">
+          <mat-option value="secondary">Wtórny</mat-option>
+          <mat-option value="primary">Pierwotny</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Sygnatura ogłoszenia</mat-label>
+        <input matInput formControlName="adSignature" type="number">
+      </mat-form-field>
+
+      <mat-form-field *ngIf="thirdFormGroup.contains('price')">
+        <mat-label>Cena</mat-label>
+        <input matInput formControlName="price" type="number">
+      </mat-form-field>
+
+      <mat-form-field *ngIf="thirdFormGroup.contains('deposit')">
+        <mat-label>Kaucja</mat-label>
+        <input matInput formControlName="deposit" type="number">
+      </mat-form-field>
+
+      <mat-form-field *ngIf="thirdFormGroup.contains('deposit')">
+        <mat-label>Wynajem/miesięcznie</mat-label>
+        <input matInput formControlName="rent" type="number">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Waluta</mat-label>
+        <mat-select formControlName="currency">
+          <mat-option value="PLN">PLN</mat-option>
+          <mat-option value="EUR">EUR</mat-option>
+          <mat-option value="USD">USD</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Powierzchnia (m²)</mat-label>
+        <input matInput formControlName="area" type="number">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Liczba pokoi</mat-label>
+        <input matInput formControlName="rooms" type="number">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Piętro</mat-label>
+        <input matInput formControlName="floor" type="number">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Liczba pięter w budynku</mat-label>
+        <input matInput formControlName="totalFloors" type="number">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Typ budynku</mat-label>
+        <mat-select formControlName="buildingType" required>
+          <mat-option value="">Wybierz</mat-option>
+          <mat-option value="none">Brak</mat-option>
+          <mat-option value="block">Blok mieszkalny</mat-option>
+          <mat-option value="multifamilyHouse">Dom wielorodzinny</mat-option>
+          <mat-option value="detachedHouse">Dom wolnostojący</mat-option>
+          <mat-option value="tenement">Kamienica</mat-option>
+          <mat-option value="apartmentBuilding">Apartamentowiec</mat-option>
+          <mat-option value="loft">Loft</mat-option>
+          <mat-option value="residence">Rezydencja</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Rok budowy</mat-label>
+        <input type="number" matInput formControlName="yearBuilt">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Stan mieszkania</mat-label>
+        <mat-select formControlName="conditionType" required>
+          <mat-option value="">Wybierz</mat-option>
+          <mat-option value="none">Brak</mat-option>
+          <mat-option value="highStandard">Wysoki standard</mat-option>
+          <mat-option value="veryGood">Bardzo dobry</mat-option>
+          <mat-option value="good">Dobry</mat-option>
+          <mat-option value="toRefresh">Do odświeżenia</mat-option>
+          <mat-option value="toRenovate">Do remontu</mat-option>
+          <mat-option value="developerFinished">Deweloperski</mat-option>
+          <mat-option value="newlyFinished">Nowe wykończone</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Typ parkingu</mat-label>
+        <mat-select formControlName="parkingType">
+          <mat-option value="">Wybierz</mat-option>
+          <mat-option value="none">Brak</mat-option>
+          <mat-option value="onStreet">Przynależne na ulicy</mat-option>
+          <mat-option value="onFencedGrounds">Przynależne na terenie ogrodzonym</mat-option>
+          <mat-option value="inUndergroundGarage">W garażu podziemnym</mat-option>
+          <mat-option value="inBuildingGarage">Garaż w bryle budynku</mat-option>
+          <mat-option value="detachedGarage">Garaż wolnostojący</mat-option>
+          <mat-option value="garageShelter">Wiata garażowa</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-slide-toggle formControlName="energeticCert">Certfikat energetyczny</mat-slide-toggle>
+      <mat-slide-toggle formControlName="elevator">Czy jest winda?</mat-slide-toggle>
+      <mat-slide-toggle formControlName="exclusiveOffer">Oferta na wyłączność</mat-slide-toggle>
+
+      <div class="buttons-wrapper button-submit">
+        <button mat-button matStepperPrevious>Poprzedni krok</button>
+        <button color="primary" mat-raised-button type="submit">Zapisz</button>
+      </div>
+    </form>
+  </mat-step>
+
+</mat-horizontal-stepper>

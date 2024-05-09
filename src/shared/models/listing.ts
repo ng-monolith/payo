@@ -20,14 +20,14 @@ export interface Listing {
     transactionType: TransactionType;
   };
   propertyDetails: {
-    propertyType: MarketType;
+    propertyType: PropertyType;
     title: string;
     description: string;
     locality: string;
     street: string;
     fullName: string;
     phone: string;
-    images?: [string]
+    images?: string[];
   };
   listingDetails: {
     marketType: MarketType;
@@ -44,7 +44,7 @@ export interface Listing {
     totalFloors?: number;
     elevator?: boolean;
     buildingType?: BuildingType;
-    yearBuilt?: string;
+    yearBuilt?: string | number
     conditionType?: ConditionType;
     parkingType?: ParkingType;
     energeticCert?: boolean;

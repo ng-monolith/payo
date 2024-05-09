@@ -2,7 +2,8 @@ import { inject, Injectable } from '@angular/core';
 import { Firestore, doc, getDoc, setDoc } from '@angular/fire/firestore';
 import {
   Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut,
-  fetchSignInMethodsForEmail, User as FirebaseUser, onAuthStateChanged
+  fetchSignInMethodsForEmail, User as FirebaseUser, onAuthStateChanged,
+  updatePassword
 } from '@angular/fire/auth';
 import { Observable, from, of, BehaviorSubject } from 'rxjs';
 import { map, switchMap, catchError } from 'rxjs/operators';
@@ -99,6 +100,35 @@ export class UserService {
     return from(fetchSignInMethodsForEmail(this.auth, email)).pipe(
       map((methods: string[]) => methods.length > 0),
       catchError(() => of(false))
+    );
+  }
+
+  updateUser(userId: string, updatedUser: Partial<User>): Observable<void> {
+    const userDocRef = doc(this.firestore, `users/${userId}`);
+    return from(setDoc(userDocRef, updatedUser, { merge: true }));
+  }
+
+  updatePassword(newPassword: string): Observable<void> {
+    const firebaseUser = this.auth.currentUser;
+    if (!firebaseUser) {
+      return of(undefined);
+    }
+
+    return from(updatePassword(firebaseUser, newPassword)).pipe(
+      switchMap(() => {
+        const userId = firebaseUser.uid;
+        const userDocRef = doc(this.firestore, `users/${userId}`);
+        return from(getDoc(userDocRef)).pipe(
+          switchMap((docSnapshot) => {
+            const user = docSnapshot.data() as User;
+            return from(setDoc(userDocRef, { ...user, password: newPassword }, { merge: true }));
+          })
+        );
+      }),
+      catchError(error => {
+        console.error('Failed to update password:', error);
+        throw error;
+      })
     );
   }
 

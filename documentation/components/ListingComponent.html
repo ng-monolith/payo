@@ -294,7 +294,7 @@
 
 
     <section data-compodoc="block-methods">
-    
+
     <h3 id="methods">
         Methods
     </h3>
@@ -329,7 +329,7 @@
 
                             <div class="io-description">
                                 <b>Parameters :</b>
-                                
+
                                 <table class="params">
                                     <thead>
                                         <tr>
@@ -359,7 +359,7 @@
 
                         </div>
                             <div class="io-description">
-                                
+
                             </div>
                 </td>
             </tr>
@@ -404,7 +404,7 @@
     </table>
 </section>
     <section data-compodoc="block-properties">
-    
+
     <h3 id="inputs">
         Properties
     </h3>
@@ -422,7 +422,7 @@
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>inject(AnnouncementServiceService)</code>
+                        <i>Default value : </i><code>inject(AnnouncementService)</code>
                     </td>
                 </tr>
                     <tr>
@@ -473,7 +473,7 @@
     <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, inject, Input, OnInit } from &#x27;@angular/core&#x27;;
 import { Listing, ListingConfig } from &#x27;../../models/listing&#x27;;
-import { AnnouncementServiceService } from &#x27;../../services/announcement-service.service&#x27;;
+import { AnnouncementService } from &#x27;../../services/announcement-service.service&#x27;;
 import { CurrencyPipe, NgForOf, TitleCasePipe, UpperCasePipe } from &#x27;@angular/common&#x27;;
 import { RouterLink } from &#x27;@angular/router&#x27;;
 import { TranslateDetailsPipe } from &#x27;../../pipes/translate-details-pipe.pipe&#x27;;
@@ -496,7 +496,7 @@ export class ListingComponent implements OnInit {
   @Input() config!: ListingConfig;
   listings: Listing[] &#x3D; [];
 
-  private announcementService &#x3D; inject(AnnouncementServiceService);
+  private announcementService &#x3D; inject(AnnouncementService);
 
   ngOnInit(): void {
     this.announcementService.getAllListings(this.config).subscribe({
@@ -613,7 +613,7 @@ export class ListingComponent implements OnInit {
         </div>
     </div>
 
-    
+
 </div>
 
 <script src="../js/libs/vis.min.js"></script>

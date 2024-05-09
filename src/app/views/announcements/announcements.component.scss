@@ -1,0 +1,63 @@
+@import "variables";
+@import "mixins";
+@import "typography";
+
+.list-container {
+  max-width: 960px;
+  width: 100%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.listing-item {
+  @include flex-center;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s;
+  &:hover {
+    background-color: #f5f5f5;
+  }
+}
+
+.listing-link {
+  @include flex-center-vertical;
+  flex: 1;
+  text-decoration: none;
+}
+
+.listing-image {
+  @include box(100px, 100px);
+  object-fit: cover;
+  border-right: 1px solid #ccc;
+}
+
+.listing-content {
+  padding: 10px;
+  flex: 1;
+}
+
+.listing-title {
+  @include title-v4;
+  margin: 0;
+}
+
+.listing-description {
+  @include body-v3;
+  margin: 5px 0 0;
+}
+
+.listing-actions {
+  @include flex-column;
+  gap: 8px;
+  padding: 10px;
+}
+
+.edit-icon, .delete-icon {
+  cursor: pointer;
+}

@@ -305,7 +305,7 @@
 
 
     <section data-compodoc="block-methods">
-    
+
     <h3 id="methods">
         Methods
     </h3>
@@ -463,7 +463,7 @@
     </table>
 </section>
     <section data-compodoc="block-properties">
-    
+
     <h3 id="inputs">
         Properties
     </h3>
@@ -507,7 +507,7 @@
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>inject(AnnouncementServiceService)</code>
+                        <i>Default value : </i><code>inject(AnnouncementService)</code>
                     </td>
                 </tr>
                     <tr>
@@ -726,7 +726,7 @@ import {
 import { BannerComponent } from &#x27;../../../shared/components/banner/banner.component&#x27;;
 import { NgIf } from &#x27;@angular/common&#x27;;
 import { SearchComponent } from &#x27;../../../shared/components/search/search.component&#x27;;
-import { AnnouncementServiceService } from &#x27;../../../shared/services/announcement-service.service&#x27;;
+import { AnnouncementService } from &#x27;../../../shared/services/announcement-service.service&#x27;;
 import { HttpClientModule } from &#x27;@angular/common/http&#x27;;
 import { ListingDetails, PropertyDetails, TransactionDetails } from &#x27;../../../shared/models/announcement.dto&#x27;;
 import { UserService } from &#x27;../../../shared/services/user.service&#x27;;
@@ -774,7 +774,7 @@ export class AddListingComponent implements OnInit {
 
   private userService &#x3D; inject(UserService);
   private _formBuilder &#x3D; inject(FormBuilder);
-  private announcementService &#x3D; inject(AnnouncementServiceService);
+  private announcementService &#x3D; inject(AnnouncementService);
   private snackBar &#x3D; inject(MatSnackBar);
   private router &#x3D; inject(Router);
 
@@ -1060,7 +1060,7 @@ export class AddListingComponent implements OnInit {
         </div>
     </div>
 
-    
+
 </div>
 
 <script src="../js/libs/vis.min.js"></script>

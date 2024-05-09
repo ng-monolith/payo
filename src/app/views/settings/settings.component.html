@@ -1,1 +1,37 @@
-<p>settings works!</p>
+<div class="setting-container">
+  <h2>Ustawienia konta</h2>
+  <form [formGroup]="settingsForm" (ngSubmit)="onSubmit()">
+
+    <mat-form-field >
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field >
+      <mat-label>Imię i nazwisko</mat-label>
+      <input matInput formControlName="fullName">
+      <mat-error *ngIf="settingsForm.get('fullName')?.hasError('required')">
+        Imię i nazwisko są wymagane
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field >
+      <mat-label>Nowe Hasło</mat-label>
+      <input matInput type="password" formControlName="password">
+      <mat-error *ngIf="settingsForm.get('password')?.hasError('minlength')">
+        Hasło musi mieć co najmniej 8 znaków
+      </mat-error>
+    </mat-form-field>
+
+    <mat-checkbox formControlName="acceptTerms">Akceptuję warunki użytkowania</mat-checkbox>
+    <mat-error *ngIf="settingsForm.get('acceptTerms')?.hasError('requiredTrue')">
+      Musisz zaakceptować warunki użytkowania
+    </mat-error>
+
+    <mat-checkbox formControlName="remember">Zapamiętaj mnie</mat-checkbox>
+
+    <div>
+      <button mat-raised-button color="primary" type="submit">Zapisz zmiany</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,6 @@
+<h2 class="text-lg font-semibold mb-4" mat-dialog-title>Potwierdzenie</h2>
+<mat-dialog-content class="text-gray-700 mb-6">{{ data.message }}</mat-dialog-content>
+<mat-dialog-actions class="dialog-actions flex justify-end space-x-3">
+  <button mat-raised-button color="warn" (click)="close('confirm')">Potwierdź</button>
+  <button mat-raised-button color="primary" (click)="close()">Anuluj</button>
+</mat-dialog-actions>

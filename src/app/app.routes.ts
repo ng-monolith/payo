@@ -29,6 +29,7 @@ import { ContactComponent } from './views/pages/contact/contact.component';
 import {
   NewsletterSuccessPageComponent
 } from './views/pages/newsletter-success-page/newsletter-success-page.component';
+import { EditAnnouncementsComponent } from './views/edit-announcements/edit-announcements.component';
 
 
 export const routes: Routes = [
@@ -57,5 +58,6 @@ export const routes: Routes = [
   { path: 'press-kit', component: PressKitComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'newsletter-success', component: NewsletterSuccessPageComponent },
+  { path: 'edit/:id', component: EditAnnouncementsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
