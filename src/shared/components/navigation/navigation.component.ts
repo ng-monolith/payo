@@ -42,6 +42,7 @@ export class NavigationComponent implements OnInit {
 
   logout(): void {
     this.userService.logoutUser();
+    this.router.navigate(['/login']);
   }
   navigateToAddListing(): void {
     this.currentUser$.subscribe(user => {

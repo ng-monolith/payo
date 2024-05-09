@@ -92,7 +92,7 @@ export class UserService {
         sessionStorage.removeItem('idToken');
         localStorage.removeItem('remember');
         sessionStorage.clear();
-      })
+      }),
     );
   }
 
