@@ -11,6 +11,13 @@ import {
 export interface ListingConfig {
   transactionType?: TransactionType;
   propertyType?: PropertyType;
+  marketType?: MarketType;
+  locality?: string;
+  distanceRadius?: number;
+  priceMin?: number;
+  priceMax?: number;
+  areaMin?: number;
+  areaMax?: number;
 }
 
 export interface Listing {

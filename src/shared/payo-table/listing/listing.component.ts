@@ -21,7 +21,7 @@ import { TranslateDetailsPipe } from '../../pipes/translate-details-pipe.pipe';
 })
 export class ListingComponent implements OnInit {
   @Input() config!: ListingConfig;
-  listings: Listing[] = [];
+  @Input() listings: Listing[] = [];
 
   private announcementService = inject(AnnouncementService);
 

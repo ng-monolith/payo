@@ -1,9 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
+import { AnnouncementService } from '../../services/announcement.service';
+import { Listing } from '../../models/listing';
+import { ListingComponent } from '../../payo-table/listing/listing.component';
 
 @Component({
   selector: 'app-search',
@@ -13,21 +16,24 @@ import { MatButtonModule } from '@angular/material/button';
     MatInputModule,
     MatSelectModule,
     MatCheckboxModule,
-    MatButtonModule
+    MatButtonModule,
+    ListingComponent,
   ],
   templateUrl: './search.component.html',
   styleUrl: './search.component.scss'
 })
 export class SearchComponent implements OnInit {
   searchForm!: FormGroup;
+  listings: Listing[] = [];
 
-  constructor(private fb: FormBuilder) {}
+  private announcementService = inject(AnnouncementService);
+  private fb = inject(FormBuilder);
 
   ngOnInit() {
     this.searchForm = this.fb.group({
-      estate: ['', Validators.required],
-      transaction: ['', Validators.required],
-      location: ['', Validators.required],
+      transactionType: ['', Validators.required],
+      marketType: ['', Validators.required],
+      locality: ['', Validators.required],
       distanceRadius: [''],
       priceMin: [''],
       priceMax: [''],
@@ -37,6 +43,14 @@ export class SearchComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.searchForm.value);
+    const formValue = this.searchForm.value;
+    this.announcementService.searchListings(formValue).subscribe({
+      next: (listings: Listing[]) => {
+        this.listings = listings;
+
+        console.log('Listings:', listings);
+      },
+      error: (error) => console.error('Failed to search listings:', error)
+    });
   }
 }

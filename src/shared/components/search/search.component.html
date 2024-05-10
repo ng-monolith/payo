@@ -3,23 +3,23 @@
     <div class="search-row top-row">
       <mat-form-field>
         <mat-label>Typ nieruchomości</mat-label>
-        <mat-select formControlName="estate">
-          <mat-option value="FLAT">Mieszkania</mat-option>
-          <mat-option value="HOUSE">Domy</mat-option>
+        <mat-select formControlName="transactionType">
+          <mat-option value="flat">Mieszkania</mat-option>
+          <mat-option value="house">Domy</mat-option>
         </mat-select>
       </mat-form-field>
 
       <mat-form-field>
         <mat-label>Typ transakcji</mat-label>
-        <mat-select formControlName="transaction">
-          <mat-option value="SELL">Na sprzedaż</mat-option>
-          <mat-option value="RENT">Na wynajem</mat-option>
+        <mat-select formControlName="marketType">
+          <mat-option value="sell">Na sprzedaż</mat-option>
+          <mat-option value="rent">Na wynajem</mat-option>
         </mat-select>
       </mat-form-field>
 
       <mat-form-field>
         <mat-label>Lokalizacja</mat-label>
-        <input matInput formControlName="location">
+        <input matInput formControlName="locality">
       </mat-form-field>
 
       <mat-form-field>
@@ -34,7 +34,6 @@
         </mat-select>
       </mat-form-field>
     </div>
-
 
     <div class="search-row bottom-row">
       <mat-form-field>
@@ -62,3 +61,5 @@
   <button mat-raised-button color="primary" type="submit">Wyszukaj</button>
 
 </form>
+
+<!--<app-listing [listings]="listings"></app-listing>-->

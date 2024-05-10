@@ -22,6 +22,8 @@ export class TranslateDetailsPipe implements PipeTransform {
     'price': 'Cena',
     'currency': 'Waluta',
     'rooms': 'Liczba pokoi',
+    'deposit': 'Kaucja',
+    'rent': 'Czynsz',
     'floor': 'Piętro',
     'totalFloors': 'Liczba pięter',
     'elevator': 'Winda',
