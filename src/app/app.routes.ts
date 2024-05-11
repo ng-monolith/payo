@@ -19,7 +19,6 @@ import { SuccessPageComponent } from './views/pages/success-page/success-page.co
 import { FeaturesComponent } from './views/pages/features/features.component';
 import { IntegrationsComponent } from './views/pages/integrations/integrations.component';
 import { DocumentationComponent } from './views/pages/documentation/documentation.component';
-import { FaqComponent } from './views/pages/faq/faq.component';
 import { PricingComponent } from './views/pages/pricing/pricing.component';
 import { TermsComponent } from './views/pages/terms/terms.component';
 import { PrivacyPolicyComponent } from './views/pages/privacy-policy/privacy-policy.component';
@@ -50,7 +49,6 @@ export const routes: Routes = [
   { path: 'features', component: FeaturesComponent },
   { path: 'integrations', component: IntegrationsComponent },
   { path: 'documentation', component: DocumentationComponent },
-  { path: 'faq', component: FaqComponent },
   { path: 'pricing', component: PricingComponent },
   { path: 'terms', component: TermsComponent },
   { path: 'privacy', component: PrivacyPolicyComponent },
