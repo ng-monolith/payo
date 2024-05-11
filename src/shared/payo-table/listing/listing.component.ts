@@ -27,12 +27,17 @@ export class ListingComponent implements OnInit {
 
   ngOnInit(): void {
     this.announcementService.getAllListings(this.config).subscribe({
-      next: (listings: Listing[]) => {
-        this.listings = listings;
+      next: (listings) => {
+        if (listings && listings.length > 0) {
+          this.listings = listings;
+        } else {
+          console.warn('No listings received or data is incomplete');
+        }
       },
       error: (error) => console.error('Failed to load listings:', error)
     });
   }
+
 
   getDetailsArray(details: any): Array<{ key: string, value: any }> {
     return Object.entries(details).map(([key, value]) => ({ key, value }));

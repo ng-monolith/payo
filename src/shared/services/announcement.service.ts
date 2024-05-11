@@ -16,7 +16,7 @@ import { Listing, ListingConfig } from '../models/listing';
   providedIn: 'root'
 })
 export class AnnouncementService {
-  private announcementsCollection: CollectionReference;
+  private readonly announcementsCollection: CollectionReference;
 
   constructor(private firestore: Firestore) {
     this.announcementsCollection = collection(this.firestore, 'announcements');

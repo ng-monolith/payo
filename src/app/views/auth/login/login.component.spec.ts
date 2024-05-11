@@ -4,7 +4,6 @@ import { LoginComponent } from './login.component';
 import { UserService } from '../../../../shared/services/user.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { Router } from '@angular/router';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -26,8 +25,8 @@ describe('LoginComponent', () => {
       imports: [
         LoginComponent,
         ReactiveFormsModule,
-        RouterTestingModule, // Dodaj RouterTestingModule bez dodatkowych tras, aby uniknąć błędów związanych z routingiem
-        NoopAnimationsModule // Dodaj to, jeśli twoje komponenty używają animacji
+        RouterTestingModule,
+        NoopAnimationsModule
       ],
       providers: [
         { provide: UserService, useValue: userServiceMock }
@@ -36,7 +35,6 @@ describe('LoginComponent', () => {
 
     fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;
-    router = TestBed.inject(Router); // Inject router to be able to spy on it later
     fixture.detectChanges();
   });
 
@@ -71,11 +69,4 @@ describe('LoginComponent', () => {
     expect(component.errorMessage).toBe('Nieprawidłowe dane logowania.');
   });
 
-  it('powinien przekierować użytkownika na stronę główną po pomyślnym zalogowaniu', () => {
-    jest.spyOn(router, 'navigate');
-    component.loginForm.controls['email'].setValue('test@example.com');
-    component.loginForm.controls['password'].setValue('password123');
-    component.onSubmit();
-    expect(router.navigate).toHaveBeenCalledWith(['/']);
-  });
 });

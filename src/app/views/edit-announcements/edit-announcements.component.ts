@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, NgZone, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatStepperModule, MatStep } from '@angular/material/stepper';
 import { MatRadioButton, MatRadioGroup } from '@angular/material/radio';
@@ -57,6 +57,7 @@ export class EditAnnouncementsComponent implements OnInit {
   };
   listingId!: string;
 
+  private ngZone = inject(NgZone);
   private userService = inject(UserService);
   private _formBuilder = inject(FormBuilder);
   private announcementService = inject(AnnouncementService);
@@ -102,9 +103,6 @@ export class EditAnnouncementsComponent implements OnInit {
 
   private updatePriceOrDepositField(type: string) {
     const listingDetails = this.thirdFormGroup.value as ListingDetails;
-
-    console.log('type:', type);
-    console.log('listingDetails:', listingDetails);
 
     if (type === 'sell') {
       if (this.thirdFormGroup.contains('deposit')) {
@@ -216,13 +214,16 @@ export class EditAnnouncementsComponent implements OnInit {
           this.snackBar.open('Ogłoszenie zostało zaktualizowane pomyślnie.', 'Zamknij', {
             duration: 5000
           });
-          this.router.navigate(['/success']);
+
+          this.ngZone.run(() => {
+            this.router.navigate(['/success']);
+
+          });
         },
-        error: error => {
+        error: () => {
           this.snackBar.open('Nie udało się zaktualizować ogłoszenia. Spróbuj ponownie.', 'Zamknij', {
             duration: 5000
           });
-          console.error('Failed to update data:', error);
         }
       });
     } else {

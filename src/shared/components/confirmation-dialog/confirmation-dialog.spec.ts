@@ -15,7 +15,7 @@ describe('ConfirmationDialogComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         NoopAnimationsModule,
-        ConfirmationDialogComponent  // Przenieś tutaj jako moduł standalone
+        ConfirmationDialogComponent
       ],
       providers: [
         { provide: MatDialogRef, useValue: mockDialogRef },

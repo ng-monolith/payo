@@ -10,6 +10,7 @@ const config: Config = {
   // automock: false,
   // Stop running tests after `n` failures
   // bail: 0,
+
   preset: 'jest-preset-angular',
   setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
   // The directory where Jest should store its cached dependency information

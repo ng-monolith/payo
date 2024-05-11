@@ -27,7 +27,7 @@ import { NgIf } from '@angular/common';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
-  protected registerForm: FormGroup;
+  registerForm: FormGroup;
   protected errorMessage: string | null = null;
 
   private userService = inject(UserService);
@@ -42,7 +42,7 @@ export class RegisterComponent {
     });
   }
 
-  protected onSubmit(): void {
+  onSubmit(): void {
     const email = this.registerForm.value.email;
 
     this.userService.checkEmailExists(email).subscribe(exists => {

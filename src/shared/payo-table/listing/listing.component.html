@@ -3,7 +3,8 @@
     <a class="card-container" [routerLink]="['/details', listing.id]">
       <img [src]="listing.propertyDetails.images ? listing.propertyDetails.images[0] : './assets/images/image-placeholder.jpg'" alt="{{ listing.propertyDetails.title }}">
       <div class="listing-details">
-        <p class="listing-details__price">{{ listing.listingDetails.price || 'Wynajem ' +  listing.listingDetails.rent }} {{ listing.listingDetails.currency }}</p>
+        <p class="listing-details__price">{{ listing?.listingDetails?.price || 'Wynajem ' +  listing?.listingDetails?.rent }} {{ listing?.listingDetails?.currency }}</p>
+
         <p class="listing-details__title">{{ listing.propertyDetails.title }}</p>
         <h3 class="listing-details__title">{{ listing.propertyDetails.locality }}, {{ listing.listingDetails.area }} m²</h3>
 
