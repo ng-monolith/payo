@@ -57,7 +57,6 @@ export class SettingsComponent implements OnInit {
     });
   }
 
-
   onSubmit(): void {
     if (this.settingsForm.valid && this.currentUser) {
       const updatedUser: Partial<User> = {
@@ -74,8 +73,7 @@ export class SettingsComponent implements OnInit {
             duration: 3000
           });
         },
-        error: (error) => {
-          console.error('Błąd podczas aktualizacji danych użytkownika:', error);
+        error: () => {
           this.snackBar.open('Nie udało się zaktualizować danych. Spróbuj ponownie.', 'Zamknij', {
             duration: 3000
           });
@@ -89,8 +87,7 @@ export class SettingsComponent implements OnInit {
               duration: 3000
             });
           },
-          error: (error) => {
-            console.error('Błąd podczas aktualizacji hasła:', error);
+          error: () => {
             this.snackBar.open('Nie udało się zaktualizować hasła. Spróbuj ponownie.', 'Zamknij', {
               duration: 3000
             });

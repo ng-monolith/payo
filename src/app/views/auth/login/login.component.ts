@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, NgZone, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -26,6 +26,7 @@ import { UserService } from '../../../../shared/services/user.service';
 export class LoginComponent implements OnInit {
   private userService = inject(UserService);
   private router = inject(Router);
+  private ngZone = inject(NgZone);
 
   loginForm = new FormGroup({
     email: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.email] }),
@@ -56,10 +57,12 @@ export class LoginComponent implements OnInit {
 
       this.userService.loginUser(email, password, remember).subscribe({
         next: () => {
-          this.router.navigate(['/']);
+
+          this.ngZone.run(() => {
+            this.router.navigate(['/']);
+          });
         },
-        error: error => {
-          console.error('Login error:', error);
+        error: () => {
           this.errorMessage = 'Nieprawidłowe dane logowania.';
         }
       });
