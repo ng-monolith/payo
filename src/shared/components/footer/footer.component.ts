@@ -34,7 +34,6 @@ export class FooterComponent implements OnInit {
     if (this.newsletterForm.valid) {
       this.newsletterService.send(this.newsletterForm.value.email).subscribe(
         () => {
-          console.log('Dziękujemy za zapisanie się do newslettera!');
           this.router.navigate(['/newsletter-success']);
         },
         (error) => {

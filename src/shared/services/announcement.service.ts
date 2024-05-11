@@ -16,8 +16,11 @@ import { Listing, ListingConfig } from '../models/listing';
   providedIn: 'root'
 })
 export class AnnouncementService {
-  private firestore = inject(Firestore);
-  private announcementsCollection: CollectionReference = collection(this.firestore, 'announcements');
+  private announcementsCollection: CollectionReference;
+
+  constructor(private firestore: Firestore) {
+    this.announcementsCollection = collection(this.firestore, 'announcements');
+  }
 
   save(data: any): Observable<any> {
     return from(addDoc(this.announcementsCollection, data));
@@ -66,32 +69,32 @@ export class AnnouncementService {
       }))
     );
   }
-  searchListings(formValue: any): Observable<Listing[]> {
-    let q = query(this.announcementsCollection);
+  searchListings(filters: any): Observable<Listing[]> {
+    let queries = query(this.announcementsCollection);
 
-    if (formValue.transactionType) {
-      q = query(q, where('transactionDetails.transactionType', '==', formValue.transactionType));
+    if (filters.transactionType) {
+      queries = query(queries, where('transactionDetails.transactionType', '==', filters.transactionType));
     }
-    if (formValue.marketType) {
-      q = query(q, where('listingDetails.marketType', '==', formValue.marketType));
+    if (filters.marketType) {
+      queries = query(queries, where('listingDetails.marketType', '==', filters.marketType));
     }
-    if (formValue.locality) {
-      q = query(q, where('propertyDetails.locality', '==', formValue.locality));
+    if (filters.locality) {
+      queries = query(queries, where('propertyDetails.locality', '==', filters.locality));
     }
-    if (formValue.priceMin) {
-      q = query(q, where('listingDetails.price', '>=', formValue.priceMin));
+    if (filters.priceMin) {
+      queries = query(queries, where('listingDetails.price', '>=', +filters.priceMin));
     }
-    if (formValue.priceMax) {
-      q = query(q, where('listingDetails.price', '<=', formValue.priceMax));
+    if (filters.priceMax) {
+      queries = query(queries, where('listingDetails.price', '<=', +filters.priceMax));
     }
-    if (formValue.areaMin) {
-      q = query(q, where('listingDetails.area', '>=', formValue.areaMin));
+    if (filters.areaMin) {
+      queries = query(queries, where('listingDetails.area', '>=', +filters.areaMin));
     }
-    if (formValue.areaMax) {
-      q = query(q, where('listingDetails.area', '<=', formValue.areaMax));
+    if (filters.areaMax) {
+      queries = query(queries, where('listingDetails.area', '<=', +filters.areaMax));
     }
 
-    return from(getDocs(q)).pipe(
+    return from(getDocs(queries)).pipe(
       map(snapshot => snapshot.docs.map(doc => ({ id: doc.id, ...(doc.data() as Listing) })))
     );
   }

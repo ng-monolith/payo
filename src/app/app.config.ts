@@ -7,15 +7,9 @@ import { provideHttpClient } from '@angular/common/http';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getAuth, provideAuth } from '@angular/fire/auth';
+import { environment } from '../environment/environment';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCyJSFO55KqoEGDCB0sQR2aHOD5mo7e9Ng",
-  authDomain: "payo-6811c.firebaseapp.com",
-  projectId: "payo-6811c",
-  storageBucket: "payo-6811c.appspot.com",
-  messagingSenderId: "616127005162",
-  appId: "1:616127005162:web:f3489ed2db9cfc8ed33293"
-};
+const firebaseConfig = environment.firebase;
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes), provideAnimationsAsync(), provideHttpClient(), importProvidersFrom([
