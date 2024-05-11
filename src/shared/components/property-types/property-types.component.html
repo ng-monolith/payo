@@ -1,0 +1,13 @@
+<div class="property-container tw-grid tw-grid-cols-1 md:tw-grid-cols-3 tw-gap-4">
+  <div *ngFor="let property of property" class="tw-max-w-sm tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg tw-shadow-md tw-dark:bg-gray-800 tw-dark:border-gray-700">
+    <a [href]="property.linkUrl">
+      <img class="tw-rounded-t-lg" [src]="property.imageUrl" [alt]="property.title" />
+    </a>
+    <div class="tw-p-5">
+      <a [href]="property.linkUrl">
+        <h5 class="tw-mb-2 tw-text-2xl tw-font-bold tw-tracking-tight tw-text-gray-900 tw-dark:text-white">{{ property.title }}</h5>
+      </a>
+      <p class="tw-mb-3 tw-font-normal tw-text-gray-700 tw-dark:text-gray-400">{{ property.description }}</p>
+    </div>
+  </div>
+</div>

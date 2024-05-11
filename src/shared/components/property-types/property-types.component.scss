@@ -1,0 +1,14 @@
+@import "variables";
+@import "mixins";
+@import "typography";
+
+.property-container {
+  @include flex-center;
+  max-width: 1200px;
+  margin: 50px auto;
+  gap: 20px;
+  img {
+    @include box(350px, 350px);
+    object-fit: cover;
+  }
+}

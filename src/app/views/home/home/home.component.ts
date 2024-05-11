@@ -3,6 +3,9 @@ import { BannerComponent } from '../../../../shared/components/banner/banner.com
 import { NgIf } from '@angular/common';
 import { SearchComponent } from '../../../../shared/components/search/search.component';
 import { FaqComponent } from '../../../../shared/components/faq/faq.component';
+import {
+  PropertyCardsComponent,
+} from '../../../../shared/components/property-types/property-types.component';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +15,7 @@ import { FaqComponent } from '../../../../shared/components/faq/faq.component';
     NgIf,
     SearchComponent,
     FaqComponent,
+    PropertyCardsComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
