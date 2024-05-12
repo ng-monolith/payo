@@ -47,19 +47,19 @@ describe('ListingComponent', () => {
     component = fixture.componentInstance;
   });
 
-  it('should create', () => {
+  it('Powinien tworzyć komponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should initialize listings on init', () => {
-    fixture.detectChanges(); // Triggers ngOnInit()
+  it('Powinien zainicjować listy na init', () => {
+    fixture.detectChanges();
 
     expect(component.listings.length).toBe(1);
     expect(component.listings[0].propertyDetails.title).toEqual('Test Property');
   });
 
-  it('should display listings correctly', () => {
-    fixture.detectChanges(); // Triggers ngOnInit()
+  it('Powinien poprawnie wyświetlać oferty', () => {
+    fixture.detectChanges();
 
     const priceElement = fixture.nativeElement.querySelector('.listing-details__price');
     expect(priceElement.textContent).toContain('250000 USD');

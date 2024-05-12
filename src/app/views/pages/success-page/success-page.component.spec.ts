@@ -36,7 +36,7 @@ describe('SuccessPageComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Powinien tworzyć komponent', () => {
     expect(component).toBeTruthy();
   });
 

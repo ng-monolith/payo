@@ -49,17 +49,17 @@ describe('EditAnnouncementsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should be created', () => {
+  it('Powinien zostać utworzony komponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('forms should be initialized correctly', () => {
+  it('Formularze powinny być poprawnie zainicjowane', () => {
     expect(component.firstFormGroup.valid).toBeFalsy();
     expect(component.secondFormGroup.valid).toBeFalsy();
     expect(component.thirdFormGroup.valid).toBeFalsy();
   });
 
-  it('submitting a form should call update announcement if form is valid', () => {
+  it('Przesłanie formularza powinno wywołać komunikat aktualizacji, jeśli formularz jest ważny', () => {
     component.firstFormGroup.setValue({transactionType: 'sell'});
     component.secondFormGroup.setValue({
       propertyType: 'flat',
