@@ -9,7 +9,6 @@ describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: any;
   let userServiceMock: any;
-  let router: any;
 
   beforeEach(async () => {
     userServiceMock = {
